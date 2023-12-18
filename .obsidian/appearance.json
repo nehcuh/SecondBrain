@@ -1,0 +1,9 @@
+{
+  "accentColor": "",
+  "cssTheme": "Prism",
+  "enabledCssSnippets": [
+    "dashboard",
+    "dashboard-ReadLineLength"
+  ],
+  "theme": "moonstone"
+}

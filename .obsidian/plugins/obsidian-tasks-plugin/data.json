@@ -1,0 +1,128 @@
+{
+  "globalQuery": "",
+  "globalFilter": "",
+  "removeGlobalFilter": false,
+  "taskFormat": "tasksPluginEmoji",
+  "setCreatedDate": false,
+  "setDoneDate": true,
+  "autoSuggestInEditor": true,
+  "autoSuggestMinMatch": 0,
+  "autoSuggestMaxItems": 6,
+  "provideAccessKeys": true,
+  "useFilenameAsScheduledDate": false,
+  "filenameAsDateFolders": [],
+  "recurrenceOnNextLine": false,
+  "statusSettings": {
+    "coreStatuses": [
+      {
+        "symbol": " ",
+        "name": "Todo",
+        "nextStatusSymbol": "x",
+        "availableAsCommand": true,
+        "type": "TODO"
+      },
+      {
+        "symbol": "x",
+        "name": "Done",
+        "nextStatusSymbol": " ",
+        "availableAsCommand": true,
+        "type": "DONE"
+      }
+    ],
+    "customStatuses": [
+      {
+        "symbol": "/",
+        "name": "In Progress",
+        "nextStatusSymbol": "x",
+        "availableAsCommand": true,
+        "type": "IN_PROGRESS"
+      },
+      {
+        "symbol": "-",
+        "name": "Cancelled",
+        "nextStatusSymbol": " ",
+        "availableAsCommand": true,
+        "type": "CANCELLED"
+      },
+      {
+        "symbol": ">",
+        "name": "Deferred",
+        "nextStatusSymbol": "x",
+        "availableAsCommand": false,
+        "type": "TODO"
+      },
+      {
+        "symbol": "r",
+        "name": "Review",
+        "nextStatusSymbol": "x",
+        "availableAsCommand": false,
+        "type": "TODO"
+      },
+      {
+        "symbol": "s",
+        "name": "Stuck",
+        "nextStatusSymbol": "-",
+        "availableAsCommand": false,
+        "type": "TODO"
+      },
+      {
+        "symbol": "s",
+        "name": "Stuck",
+        "nextStatusSymbol": "x",
+        "availableAsCommand": false,
+        "type": "TODO"
+      },
+      {
+        "symbol": "s",
+        "name": "Stuck",
+        "nextStatusSymbol": " ",
+        "availableAsCommand": false,
+        "type": "TODO"
+      },
+      {
+        "symbol": "?",
+        "name": "Question",
+        "nextStatusSymbol": " ",
+        "availableAsCommand": false,
+        "type": "TODO"
+      },
+      {
+        "symbol": "?",
+        "name": "Question",
+        "nextStatusSymbol": "x",
+        "availableAsCommand": false,
+        "type": "TODO"
+      },
+      {
+        "symbol": "?",
+        "name": "Question",
+        "nextStatusSymbol": ">",
+        "availableAsCommand": false,
+        "type": "TODO"
+      }
+    ]
+  },
+  "features": {
+    "INTERNAL_TESTING_ENABLED_BY_DEFAULT": true
+  },
+  "generalSettings": {},
+  "headingOpened": {
+    "Core Statuses": true,
+    "Custom Statuses": true
+  },
+  "debugSettings": {
+    "ignoreSortInstructions": false,
+    "showTaskHiddenData": false
+  },
+  "loggingOptions": {
+    "minLevels": {
+      "": "info",
+      "tasks": "info",
+      "tasks.Cache": "info",
+      "tasks.Events": "info",
+      "tasks.File": "info",
+      "tasks.Query": "info",
+      "tasks.Task": "info"
+    }
+  }
+}

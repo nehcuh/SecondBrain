@@ -1,0 +1,28 @@
+---
+title: <% tp.file.title.split("-")[0] %>
+created_at: <% tp.date.now("YYYY-MM-DD HH:mm:ss") %>
+startTime: 
+endTime: 
+date: <% tp.date.now("YYYY-MM-DD") %>
+done: 
+Project: 
+Area/Resource: 
+Archived: 
+location: 
+tags:
+  - "#meeting"
+due: <% tp.date.now("YYYY-MM-DD") %>
+scheduled_time: <% tp.date.now("HH:MM") %>
+---
+# 会议基础信息
+1. 会议时间: `= dateformat(this.date,"DD") + " " + this.startTime + "-" + this.endTime`
+2. 会议地点: `= this.location`
+3. 会议主题:  `=this.title`
+4. 参会人:
+
+# 会议纪要
+
+# 会议结论
+
+
+# 后续跟踪

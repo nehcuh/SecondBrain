@@ -1,0 +1,236 @@
+{
+  "main": {
+    "id": "97894aba98e5e6ea",
+    "type": "split",
+    "children": [
+      {
+        "id": "ce0ddbe19452b138",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f31baa1bca09e0a5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "🏡 HomePage.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2d885e4e64b2a7e6",
+    "type": "split",
+    "children": [
+      {
+        "id": "2ca4557cfd23a79f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4e427a40a36cd0b0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ac8bf69109e17bdc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "HomeP",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e4f822e6c2a94537",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "77cbd5b92b6ae9e6",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+            "id": "4cfda92ddddd447a",
+            "type": "leaf",
+            "state": {
+              "type": "file-tree-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9e4cfe6cbb243b14",
+    "type": "split",
+    "children": [
+      {
+        "id": "36c205979e07380f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "611746fa017b0506",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "🏡 HomePage.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2ebc25fe05ba06ee",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "🏡 HomePage.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5e38095260c52fe2",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "24909aa97213fb64",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "🏡 HomePage.md"
+              }
+            }
+          },
+          {
+            "id": "002133e9d5ec405b",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "b0525a17236be752",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "homepage:Open homepage": false,
+      "omnisearch:Omnisearch": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "templater-obsidian:Templater": false,
+      "file-tree-alternative:File Tree Alternative Plugin": false,
+      "obsidian-full-calendar:Open Full Calendar": false,
+      "copilot:Copilot Chat": false,
+      "markdown-table-editor:Open Markdown Table Editor": false,
+      "obsidian-statusbar-pomo:Start pomodoro": false,
+      "terminal:Open terminal": false,
+      "obsidian-comments:Show Comments Panel": false,
+      "workspaces:管理工作区布局": false,
+      "audio-recorder:开始/结束录音": false,
+      "markdown-importer:打开 Markdown 格式转换器": false
+    }
+  },
+  "active": "f31baa1bca09e0a5",
+  "lastOpenFiles": [
+    "01. Tasks/202312/1217_周日/✅ Hello World Router-202312171012.md",
+    "06. Notes/Fleeting/20231217/📖 Hello World Router-202312171618.md",
+    "06. Notes/Fleeting/20231217",
+    "🏡 HomePage.md",
+    "04. Projects/Rust Axum Learning/🏗️ Rust Axum Learning.md",
+    "05. Areas & Resources/Rust/⛰️ Rust.md",
+    "05. Areas & Resources/Rust",
+    "⛰️ Rust.md",
+    "01. Tasks/202312/1217_周日/✅ hello route-202312171012.md",
+    "01. Tasks/202312/1217_周日/✅ quick dev-202312171012.md",
+    "99. Hidden/Templates/✅ Task Template.md",
+    "01. Tasks/202312/1217_周日/✅ TABLE title, scheduled, due FROM [[]] \nWHERE (contains(tags, \"#task\") OR contains(tags, \"#meeting\"))\nAND !Archived AND !contains(file.path, \"99. Hidden\")\nSORT schedule ASC-202312171012.md",
+    "01. Tasks/202312/1217_周日",
+    "01. Tasks/202312",
+    "04. Projects/Rust Axum Learning",
+    "99. Hidden/Templates/📒 Evergreen Note Template.md",
+    "06. Notes/Permanent",
+    "06. Notes/Literature",
+    "06. Notes/Fleeting/未命名",
+    "06. Notes/Fleeting",
+    "99. Hidden/Templates/📖 ReadWise Note Taking.md",
+    "99. Hidden/Templates/🏗️ Project Template.md",
+    "99. Hidden/Templates/⛰️ Area Resource Template.md",
+    "04. Projects/hello world/🏗️ hello world.md",
+    "04. Projects/hello world",
+    "04. Projects/代码扫描测试/🏗️ 代码扫描测试.md",
+    "99. Hidden/Scripts/未命名.md",
+    "99. Hidden/未命名.md",
+    "99. Hidden/Templates/🔔 Meeting Template.md",
+    "Home.md",
+    "03. Journals/Daily/2023-12-16_周六.md",
+    "99. Hidden/Templates/📆 Daily Template.md",
+    "02. Meetings/202312/1216_周六/🔔 hello-202312161339.md",
+    "01. Tasks/202312/1216_周六/✅ hello-202312161312.md",
+    "01. Tasks/202312/1216_周六/✅ project related teset-202312161312.md",
+    "02. Meetings/202312/12-16_周六/🔔 hello-202312161300.md"
+  ]
+}
