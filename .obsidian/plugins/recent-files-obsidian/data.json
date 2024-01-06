@@ -5,32 +5,16 @@
       "path": "🏡 HomePage.md"
     },
     {
-      "basename": "✅ Hello World Router-202312171012",
-      "path": "01. Tasks/202312/1217_周日/✅ Hello World Router-202312171012.md"
-    },
-    {
-      "basename": "📖 Hello World Router-202312171618",
-      "path": "06. Notes/Fleeting/20231217/📖 Hello World Router-202312171618.md"
-    },
-    {
-      "basename": "🏗️ Rust Axum Learning",
-      "path": "04. Projects/Rust Axum Learning/🏗️ Rust Axum Learning.md"
-    },
-    {
-      "basename": "⛰️ Rust",
-      "path": "05. Areas & Resources/Rust/⛰️ Rust.md"
-    },
-    {
-      "basename": "✅ hello route-202312171012",
-      "path": "01. Tasks/202312/1217_周日/✅ hello route-202312171012.md"
-    },
-    {
-      "basename": "✅ quick dev-202312171012",
-      "path": "01. Tasks/202312/1217_周日/✅ quick dev-202312171012.md"
+      "basename": "⛰️ Area Resource Template",
+      "path": "99. Hidden/Templates/⛰️ Area Resource Template.md"
     },
     {
       "basename": "✅ Task Template",
       "path": "99. Hidden/Templates/✅ Task Template.md"
+    },
+    {
+      "basename": "🏗️ Project Template",
+      "path": "99. Hidden/Templates/🏗️ Project Template.md"
     },
     {
       "basename": "📒 Evergreen Note Template",
@@ -41,20 +25,8 @@
       "path": "99. Hidden/Templates/📖 ReadWise Note Taking.md"
     },
     {
-      "basename": "🏗️ Project Template",
-      "path": "99. Hidden/Templates/🏗️ Project Template.md"
-    },
-    {
-      "basename": "⛰️ Area Resource Template",
-      "path": "99. Hidden/Templates/⛰️ Area Resource Template.md"
-    },
-    {
       "basename": "🔔 Meeting Template",
       "path": "99. Hidden/Templates/🔔 Meeting Template.md"
-    },
-    {
-      "basename": "2023-12-16_周六",
-      "path": "03. Journals/Daily/2023-12-16_周六.md"
     },
     {
       "basename": "📆 Daily Template",

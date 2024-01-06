@@ -4,6 +4,7 @@
     "cssclasses": "multitext",
     "tags": "tags",
     "done": "checkbox",
-    "Archived": "checkbox"
+    "Archived": "checkbox",
+    "actionable": "checkbox"
   }
 }

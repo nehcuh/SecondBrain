@@ -3,8 +3,6 @@ cssclasses:
   - dashboard
   - dashboard-ReadLineLength
 ---
-
-
 # 🛠️ Quick Actions
 
 - ✅ Task Actions
@@ -39,30 +37,31 @@ cssclasses:
 	type command
 	action QuickAdd: ⛰️ Create Area/Resource
 	```
-# ⏰ TODOs
-
-- 📥 Tasks Inbox
-	```dataview
-	 TABLE title, created_at, tags, due FROM "" WHERE contains(tags, "#task") AND !contains(tags, "#task/delegate") AND Project = null AND "Area/Resource" = null AND delegate = null AND !Archived AND !contains(file.path, "99. Hidden") SORT due asc
-	```
+# 🤺 Tasks
 - 💦 Today
-
 	```dataview
-	TABLE title, tags, Area/Resource, Project, due
-	WHERE (contains(tags, "#task") OR contains(tags, "#meeting")) AND date(due) <= date(today) AND !done AND !contains(file.path, "99. Hidden") AND !Archived SORT due asc
+	TABLE WITHOUT ID (link(file.path, title)) as Title, tags as Tags, Area/Resource, Project, due as Due
+	WHERE (contains(tags, "#task") OR contains(tags, "#meeting")) AND date(due) = date(today) AND !done AND !contains(file.path, "99. Hidden") AND !Archived SORT due asc
 	```
 
 - 📅 Within A Week
 	%% tasks due within a week from today (not included) %%
 	```dataview
-	TABLE title, tags, Area/Resource, Project, due FROM "" 
+	TABLE WITHOUT ID (link(file.path, title)) as Title, tags AS Tags, Area/Resource, Project, due AS Due FROM "" 
 	WHERE (contains(tags, "#task") OR contains(tags, "#meeting")) AND date(due) > date(today) AND (date(due) <= date(today) + dur(7 days)) AND !done AND !Archived AND !contains(file.path, "99. Hidden") SORT due asc
 	```
-
-- ✍️ Unfinished Writings
+- ❗Dued Tasks
 	```dataview
-	TABLE title, tags, Area/Resource, Project FROM "" 
-	WHERE contains(tags, "#note/🌱") AND !Archived AND !contains(file.path, "99. Hidden") SORT due asc
+	TABLE WITHOUT ID (link(file.path, title)) as Title, tags as Tags, Area/Resource, Project, due as Due
+	WHERE actionable AND (contains(tags, "#task") OR contains(tags, "#meeting")) AND date(due) < date(today) AND !done AND !contains(file.path, "99. Hidden") AND !Archived SORT due asc
+	```
+- ❓Someday
+  ```dataview
+	 TABLE WITHOUT ID (link(file.path, title)) as Title, created_at AS Created, tags AS Tags, scheduled AS Scheduled FROM "" WHERE !actionable AND contains(tags, "#task") AND contains(tags, "#task/someday") SORT scheduled asc
+	```
+- 📥 Tasks Inbox
+	```dataview
+	 TABLE WITHOUT ID (link(file.path, title)) as Title, created_at AS Created, tags AS Tags FROM "" WHERE !actionable AND contains(tags, "#task") AND !contains(tags, "#task/someday") AND !contains(tags, "#task/delegate") AND Project = null AND Area/Resource = null AND delegate = null AND !Archived AND !contains(file.path, "99. Hidden") SORT due asc
 	```
 
 # 🎯 Goals
@@ -86,8 +85,9 @@ cssclasses:
 	tags include #goal
 	filter by function task.file.folder.includes("04. Projects")
 	```
-# 🔨 In Progress
-## 🏗️  Projects Processing
+
+# 🎛️Projects
+## 🏗️ Processing
 
 ```dataview
 Table Deadline, Area/Resource, Progress
@@ -96,8 +96,7 @@ WHERE !contains(file.path, "99. Hidden") AND status = "#🟩"
 SORT Deadline asc
 ```
 
-# 🚧 Waiting
-## 📋 Projects Waiting
+## 🧱 Waiting
 
 ```dataview
 table Deadline, Area/Resource
@@ -108,17 +107,22 @@ SORT Deadline asc
 # 🧐 Creativity
 ## 📝 Notes
 
-See it all in my [[02 Notes/My Greenhouse.md|My Greenhouse]]
-
 ```dataview
-table created_at, tags AS status
+Table  WITHOUT ID (link(file.path, title)) AS Title, created_at AS Created, tags AS Status, next_review AS Review
 from ""
 WHERE (contains(tags, "#note/🌱") OR  contains(tags, "#note/🌿"))
 AND !contains(file.path, "99. Hidden")
 sort created_at desc
 ```
 
-
+## 💼References
+```dataview
+Table  WITHOUT ID (link(file.path, title)) AS Title, created_at AS Created, tags AS Status
+from ""
+WHERE contains(tags, "#note/💼")
+AND !contains(file.path, "99. Hidden")
+sort created_at desc
+```
 # 🛜 Quick Links
 - 📁 PARA Method
 	- 🚧 Projects

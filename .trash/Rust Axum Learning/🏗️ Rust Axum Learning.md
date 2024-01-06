@@ -5,7 +5,7 @@ tags:
 Area/Resource: "[[⛰️ Rust]]"
 Archived: 
 Deadline: 2023-12-31
-Progress: <progress max=100 value=0> </progress> 0%
+Progress: <progress max=100 value=20> </progress> 0%
 status: "#🟩"
 banner: 
 banner_x: 

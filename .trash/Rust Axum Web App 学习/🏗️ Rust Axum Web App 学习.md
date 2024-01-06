@@ -1,5 +1,5 @@
 ---
-created_at: <% tp.date.now("YYYY-MM-DD HH:mm:ss") %>
+created_at: 2024-01-06 10:24:39
 tags:
   - "#project"
 Area/Resource: 

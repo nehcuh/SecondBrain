@@ -9,6 +9,7 @@ tags:
 links: 
 types: readwise
 due: <% tp.date.now("YYYY-MM-DD") %>
+next_review: <% tp.date.now("YYYY-MM-DD", 7) %>
 ---
 # 原文摘要
 > [!tip] 
