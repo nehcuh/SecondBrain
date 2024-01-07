@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6901628ec860019c",
+        "id": "abc91714cdcaa84c",
         "type": "tabs",
         "children": [
           {
-            "id": "d7fd7332561d188e",
+            "id": "f72a831451ad1e1a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🏡 HomePage.md",
+                "file": "05. Areas & Resources/🏋️Health & Fitness/⛰️ 🏋️Health & Fitness.md",
                 "mode": "source",
                 "source": false
               }
@@ -81,8 +81,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -102,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🏡 HomePage.md",
+                "file": "05. Areas & Resources/🏋️Health & Fitness/⛰️ 🏋️Health & Fitness.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🏡 HomePage.md",
+                "file": "05. Areas & Resources/🏋️Health & Fitness/⛰️ 🏋️Health & Fitness.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🏡 HomePage.md"
+                "file": "05. Areas & Resources/🏋️Health & Fitness/⛰️ 🏋️Health & Fitness.md"
               }
             }
           },
@@ -162,12 +161,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,14 +194,29 @@
       "obsidian-comments:Show Comments Panel": false
     }
   },
-  "active": "d7fd7332561d188e",
+  "active": "f72a831451ad1e1a",
   "lastOpenFiles": [
-    "99. Hidden/Templates/⛰️ Area Resource Template.md",
+    "🏡 HomePage.md",
+    "📥Tasks Dashboard.md",
+    "05. Areas & Resources/🏋️Health & Fitness/⛰️ 🏋️Health & Fitness.md",
+    "01. Tasks/202401/0107_周日/✅ 私教健身-202401071401.md",
+    "03. Journals/Daily/2024-01-06_周六.md",
+    "99. Hidden/Templates/📆 Daily Template.md",
     "99. Hidden/Templates/✅ Task Template.md",
+    "03. Journals/Daily/2024-01-07_周日.md",
+    "03. Journals/Daily/未命名.md",
+    "01. Tasks/202401/0107_周日",
+    "01. Tasks/202401/0106_周六/✅ 导入恒生缺陷修改单-202401061801.md",
+    "01. Tasks/202401/0106_周六",
+    "01. Tasks/202401",
+    "99. Hidden/Templates/⛰️ Area Resource Template.md",
+    "99. Hidden/Attachments/edgar-chaparro-sHfo3WOgGTU-unsplash.jpg",
+    "99. Hidden/Attachments/edgar-chaparro-sHfo3WOgGTU-unsplash.jpg.crdownload",
+    "99. Hidden/Attachments",
+    "05. Areas & Resources/🏋️Health & Fitness",
     "99. Hidden/Templates/🏗️ Project Template.md",
     "99. Hidden/Templates/📒 Evergreen Note Template.md",
     "99. Hidden/Templates/📖 ReadWise Note Taking.md",
-    "🏡 HomePage.md",
     "05. Areas & Resources/Rust/⛰️ Rust.md",
     "04. Projects/Rust Axum Learning/🏗️ Rust Axum Learning.md",
     "03. Journals/Daily/2023-12-16_周六.md",
@@ -217,21 +231,7 @@
     "02. Meetings/202401",
     "01. Tasks/202401/0106_周六/✅ OB 首页配置-202401061001.md",
     "01. Tasks/202401/0106_周六/✅ 修改 Obsidian 首页配置-202401061001.md",
-    "01. Tasks/202401/0106_周六",
-    "01. Tasks/202401",
     "02. Meetings",
-    "TestPage.md",
-    "01. Tasks/202312/1217_周日/✅ Hello World Router-202312171012.md",
-    "06. Notes/Fleeting/20231217/📖 Hello World Router-202312171618.md",
-    "06. Notes/Fleeting/20231217",
-    "05. Areas & Resources/Rust",
-    "⛰️ Rust.md",
-    "01. Tasks/202312/1217_周日/✅ quick dev-202312171012.md",
-    "01. Tasks/202312/1217_周日/✅ TABLE title, scheduled, due FROM [[]] \nWHERE (contains(tags, \"#task\") OR contains(tags, \"#meeting\"))\nAND !Archived AND !contains(file.path, \"99. Hidden\")\nSORT schedule ASC-202312171012.md",
-    "01. Tasks/202312/1217_周日",
-    "01. Tasks/202312",
-    "04. Projects/hello world/🏗️ hello world.md",
-    "04. Projects/代码扫描测试/🏗️ 代码扫描测试.md",
-    "99. Hidden/Scripts/未命名.md"
+    "TestPage.md"
   ]
 }

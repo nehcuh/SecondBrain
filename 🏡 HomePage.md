@@ -37,6 +37,15 @@ cssclasses:
 	type command
 	action QuickAdd: ⛰️ Create Area/Resource
 	```
+# 🛜 Quick Links
+- 🗓️ Agenda
+	  	-  `$= '[[03. Journals/Daily/'+moment().subtract(1, "days").format("YYYY-MM-DD_ddd")+'|Yesterday]]'`
+	  	-  `$= '[[03. Journals/Daily/'+moment().format("YYYY-MM-DD_ddd")+'|Today]]'`
+	  	  - `$= '[[03. Journals/Daily/'+moment().add(1, "days").format("YYYY-MM-DD_ddd")+'|Tomorrow]]'`
+	
+
+
+
 # 🤺 Tasks
 - 💦 Today
 	```dataview
@@ -68,7 +77,6 @@ cssclasses:
 - 🎉 Yearly Goals
   ```tasks
 	not done
-	due this year
 	tags include #goal
 	filter by function task.file.folder.includes("05. Areas & Resources")
     ```
@@ -104,6 +112,13 @@ FROM #project WHERE status = "#⬜️" AND !contains(file.path, "99 Hidden")
 SORT Deadline asc
 ```
 
+# 🏔️ Areas
+```dataview
+Table Area/Resource
+FROM #area 
+WHERE !contains(file.path, "99. Hidden")
+SORT Deadline asc
+```
 # 🧐 Creativity
 ## 📝 Notes
 
