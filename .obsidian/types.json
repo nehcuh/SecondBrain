@@ -1,0 +1,12 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "Done": "checkbox",
+    "Archived": "checkbox",
+    "Actionable": "checkbox",
+    "nextReview": "text",
+    "allDay": "checkbox"
+  }
+}

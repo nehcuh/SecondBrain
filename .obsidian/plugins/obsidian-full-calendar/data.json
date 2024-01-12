@@ -1,0 +1,26 @@
+{
+  "calendarSources": [
+    {
+      "type": "local",
+      "color": "#27685d",
+      "directory": "01. Tasks"
+    },
+    {
+      "type": "local",
+      "color": "#a8b030",
+      "directory": "02. Meetings"
+    },
+    {
+      "type": "local",
+      "color": "#3b2caa",
+      "directory": "06. Notes"
+    }
+  ],
+  "defaultCalendar": 0,
+  "firstDay": 1,
+  "initialView": {
+    "desktop": "timeGridWeek",
+    "mobile": "timeGrid3Days"
+  },
+  "timeFormat24h": true
+}

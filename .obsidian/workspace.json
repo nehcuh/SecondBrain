@@ -1,0 +1,232 @@
+{
+  "main": {
+    "id": "a94a4f7e3d7b72f8",
+    "type": "split",
+    "children": [
+      {
+        "id": "68dbdd314274bdd1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "655c6b0f1fa49883",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "🏡 HomePage.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1077df0c58049b11",
+    "type": "split",
+    "children": [
+      {
+        "id": "91c1ae80ad76e2a3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "27e6b3c4f4f0d103",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bd8ae70e9e095b88",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:note/🌱",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c7bd31eaa35f52b2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "bdbfaf28d6d91d51",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8779372cd7e06a95",
+    "type": "split",
+    "children": [
+      {
+        "id": "300aa1c6a32e3da6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f525c1e64986aba7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "🏡 HomePage.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "eff3ff9c8c770b1e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "🏡 HomePage.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "530ae14d92389578",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "4bd7377a3568c158",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "🏡 HomePage.md"
+              }
+            }
+          },
+          {
+            "id": "81d4a3ed7406e482",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "481fc5cb87b1f14e",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "workspaces:管理工作区布局": false,
+      "audio-recorder:开始/结束录音": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "templater-obsidian:Templater": false,
+      "omnisearch:Omnisearch": false,
+      "open-vscode:VSCode": false,
+      "obsidian-full-calendar:Open Full Calendar": false,
+      "homepage:Open homepage": false
+    }
+  },
+  "active": "655c6b0f1fa49883",
+  "lastOpenFiles": [
+    "05. Resources/xx company/🏞️ xx company.md",
+    "🏡 HomePage.md",
+    "05. Resources/xx company",
+    "06. Notes/Common/202401/📒 windows 安装 wsl nvdia 驱动-202401121706.md",
+    "06. Notes/Common/202401",
+    "06. Notes/Common",
+    "09. Knowledge Base/20240112/💡 运维文档.md",
+    "06. Notes/Notebooks/🗂️ rust axum web app.md",
+    "06. Notes/Notebooks",
+    "02. Meetings/20240112/🔔 project startup-202401121705.md",
+    "02. Meetings/20240112",
+    "01. Tasks/20240112/✅ hello world-202401121704.md",
+    "04. Areas/🛜 Web Development/🛜 Web Development.md",
+    "04. Areas/🛜 Web Development",
+    "01. Tasks/20240112",
+    "README.md",
+    "99. Hidden/Attachments/Images/Pasted image 20240112170327.png",
+    "99. Hidden/Attachments/Images/Pasted image 20240112170300.png",
+    "99. Hidden/Attachments/Images/Pasted image 20240112170220.png",
+    "Attachments",
+    "Attachments/Pasted image 20240112170131.png",
+    "image.png",
+    "01. Tasks/20240112/✅ 沟通制品 xray 扫描流程-202401121622.md",
+    "01. Tasks/20240112/✅ 三期权限体系讨论-202401121558.md",
+    "09. Knowledge Base/20240112/💡 代码扫描开发规范落地建设草案.md",
+    "09. Knowledge Base/20240112/Attachments/Pasted image 20240112152741.png",
+    "09. Knowledge Base/20240112/Attachments/Pasted image 20240112152618.png",
+    "09. Knowledge Base/20240112/Attachments",
+    "01. Tasks/20240112/✅ 与安全组沟通海云安对接方案-202401121409.md",
+    "01. Tasks/20240112/Attachments/Pasted image 20240112141105.png",
+    "01. Tasks/20240112/Attachments/Pasted image 20240112141041.png",
+    "01. Tasks/20240112/Attachments/Pasted image 20240112141036.png",
+    "01. Tasks/20240112/Attachments",
+    "07. Excalidraw/Drawing 2024-01-12 13.57.11.excalidraw.md",
+    "99. Hidden/Templates/✅ Task Template.md",
+    "01. Tasks/20240112/✅ JFrog支持Gitee的工单-202401121028.md",
+    "06. Notes/Periodic/Daily/2024-01-12_周五.md",
+    "01. Tasks/20240111/✅ 招证代码引擎开发规范落地建设方案-202401111912.md",
+    "01. Tasks/20240112/✅ 天工平台三期启动会-202401121324.md",
+    "04. Areas/❤️ Health & Fitness/❤️ Health & Fitness.md",
+    "04. Areas/☯️ Personal Development/☯️ Personal Development.md",
+    "04. Areas/💻 代码扫描/💻 代码扫描.md",
+    "04. Areas/🛠️ 运维/🛠️ 运维.md",
+    "99. Hidden/Templates/🗂️ Notebook.md",
+    "09. Knowledge Base/20240112/💡 运维台账.md",
+    "06. Notes/Common/202401/📒 机器管理-202401120843.md"
+  ]
+}
