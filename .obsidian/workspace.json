@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🏡 HomePage.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🏡 HomePage.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🏡 HomePage.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🏡 HomePage.md"
+                "file": "README.md"
               }
             }
           },
@@ -182,8 +182,9 @@
   },
   "active": "655c6b0f1fa49883",
   "lastOpenFiles": [
-    "05. Resources/xx company/🏞️ xx company.md",
+    "image.png",
     "🏡 HomePage.md",
+    "05. Resources/xx company/🏞️ xx company.md",
     "05. Resources/xx company",
     "06. Notes/Common/202401/📒 windows 安装 wsl nvdia 驱动-202401121706.md",
     "06. Notes/Common/202401",
@@ -203,7 +204,6 @@
     "99. Hidden/Attachments/Images/Pasted image 20240112170220.png",
     "Attachments",
     "Attachments/Pasted image 20240112170131.png",
-    "image.png",
     "01. Tasks/20240112/✅ 沟通制品 xray 扫描流程-202401121622.md",
     "01. Tasks/20240112/✅ 三期权限体系讨论-202401121558.md",
     "09. Knowledge Base/20240112/💡 代码扫描开发规范落地建设草案.md",
@@ -226,7 +226,6 @@
     "04. Areas/💻 代码扫描/💻 代码扫描.md",
     "04. Areas/🛠️ 运维/🛠️ 运维.md",
     "99. Hidden/Templates/🗂️ Notebook.md",
-    "09. Knowledge Base/20240112/💡 运维台账.md",
-    "06. Notes/Common/202401/📒 机器管理-202401120843.md"
+    "09. Knowledge Base/20240112/💡 运维台账.md"
   ]
 }

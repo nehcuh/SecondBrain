@@ -11,6 +11,6 @@
 4. `🏡 HomePage` 是第二大脑的首页，集成了所有快捷创建包括 “任务” “笔记” “项目” “资源” 等的按钮，使用 dataview 实现了快速预览任务，笔记等
 
 ## 截图
-![[Pasted image 20240112170220.png]]
-![[Pasted image 20240112170300.png]]
-![[Pasted image 20240112170327.png]]
+![](99. Hidden/Attachments/Images/Pasted image 20240112170220.png)
+![](99. Hidden/Attachments/Images/Pasted image 20240112170300.png)
+![](99. Hidden/Attachments/Images/Pasted image 20240112170327.png)

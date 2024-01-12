@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "🏡 HomePage",
       "path": "🏡 HomePage.md"
     },
@@ -31,10 +35,6 @@
     {
       "basename": "🛜 Web Development",
       "path": "04. Areas/🛜 Web Development/🛜 Web Development.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "✅ 沟通制品 xray 扫描流程-202401121622",
