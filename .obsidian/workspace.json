@@ -32,6 +32,49 @@
             }
           }
         ]
+      },
+      {
+        "id": "6ce8f5e99eb02a86",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7d1cbb07c9ed581c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "06. Resources/resource demo/🏞️ resource demo.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "🏞️ resource demo"
+            }
+          },
+          {
+            "id": "00d768ceff196fdb",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "08. Excalidraw/Drawing 2025-02-20 15.17.48.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-02-20 15.17.48.excalidraw"
+            }
+          }
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -223,25 +266,29 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "d542905c00b57772",
+  "active": "00d768ceff196fdb",
   "lastOpenFiles": [
+    "06. Resources/resource demo/🏞️ resource demo.md",
+    "08. Excalidraw/Drawing 2025-02-20 15.17.48.excalidraw.md",
+    "03. Notes/Periodic/Daily/📆 20250220_Thu.md",
+    "06. Resources/resource demo",
+    "04. Projects/白盒代码扫描一期建设/🏗️ 白盒代码扫描一期建设.md",
+    "04. Projects/白盒代码扫描一期建设",
+    "03. Notes/Common/202502/📒 fake common - 202502201516.md",
+    "03. Notes/Common/202502",
+    "02. Meetings/202502/📅 fake meeting - 202502201515.md",
+    "02. Meetings/202502",
     "02.",
     "06.",
     "03.",
     "07.",
     "04.",
     "99.",
-    "08.",
-    "01.",
-    "05.",
     "05. Areas/LLM 应用/🏕️ LLM 应用.md",
-    "03. Notes/Periodic/Daily/📆 20250220_Thu.md",
     "03. Notes/Inspirations/202502/🌟 通过 AI 检查邮件.md",
     "🏡 HomePage.md",
-    "03. Notes/Inspirations/202502",
     "99. Hidden/Templates/🏕️ Area Template.md",
     "03. Notes/Clipping/202502/✂️ mcp bridge - 202502201440.md",
-    "05. Areas/LLM 应用",
     "01. Tasks/202502/02-20_Thu/✅ 跟踪 STAC 需求状态 - 202502201437.md",
     "03. Notes/Notebooks/Rust 编程第一课/🗂️ Rust 编程第一课.md",
     "03. Notes/Readwise/202409/📖 13｜类型系统：如何使用trait来定义接口？ - 202409022238.md",
