@@ -1,0 +1,491 @@
+{
+  "choices": [
+    {
+      "id": "233ee492-e15c-4eda-9371-94a4d8e16c38",
+      "name": "📆 New Daily Note",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99. Hidden/Templates/📆 Daily Template.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "📆 {{DATE:YYYYMMDD_ddd}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "03. Notes/Periodic/Daily"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": true,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Nothing",
+      "setFileExistsBehavior": true
+    },
+    {
+      "id": "1bddfc87-8c41-48e7-9f2c-f0e5e3d332c6",
+      "name": "✅ New Task",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99. Hidden/Templates/✅ Task Template.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "✅ {{NAME}} - {{DATE:YYYYMMDDHHmm}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "01. Tasks/{{DATE:YYYYMM}}/{{DATE:MM-DD_ddd}}"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": true,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false
+    },
+    {
+      "id": "f3640f11-a10f-4449-9fbf-db4ba8071b48",
+      "name": "📅 New Meeting",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99. Hidden/Templates/📅 Meeting Template.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "📅 {{name}} - {{DATE:YYYYMMDDHHmm}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "02. Meetings/{{DATE:YYYYMM}}"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": true,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false
+    },
+    {
+      "id": "93b5c651-66ae-4748-9b62-8e3b6e7fa928",
+      "name": "✂️ New Clipping",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99. Hidden/Templates/✂️ Clipping Template.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "✂️ {{name}} - {{DATE:YYYYMMDDHHmm}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "03. Notes/Clipping/{{DATE:YYYYMM}}"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": true,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false
+    },
+    {
+      "id": "ef2ffa05-827d-4da3-aeae-37307850c9b2",
+      "name": "💎 New Milestone",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99. Hidden/Templates/💎 Milestone Template.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "💎 {{name}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [],
+        "chooseWhenCreatingNote": true,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": true,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Nothing",
+      "setFileExistsBehavior": true
+    },
+    {
+      "id": "32e9e0d2-8e88-4ad8-ab0f-7c09cf8194a8",
+      "name": "🏆 New Goal",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99. Hidden/Templates/🏆 Goal Template.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "🏆 {{name}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [],
+        "chooseWhenCreatingNote": true,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": true,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Nothing",
+      "setFileExistsBehavior": true
+    },
+    {
+      "id": "928a0499-dc4d-4bf3-afa8-c9f78f3c452b",
+      "name": "🏗️ New Project",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99. Hidden/Templates/🏗️ Project Template.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "🏗️ {{name}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "04. Projects/{{name}}"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": true,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false
+    },
+    {
+      "id": "23bdacf2-903d-413a-a281-c3808b3e7c0f",
+      "name": "🏕️ New Area",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99. Hidden/Templates/🏕️ Area Template.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "🏕️ {{name}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "05. Areas/{{name}}"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": true,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Nothing",
+      "setFileExistsBehavior": true
+    },
+    {
+      "id": "9af56dd2-f5fb-42c5-beae-40c4a5d49e08",
+      "name": "🏞️ New Resource",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99. Hidden/Templates/🏞️ Resource Template.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "🏞️ {{name}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "06. Resources/{{name}}"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": true,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Nothing",
+      "setFileExistsBehavior": true
+    },
+    {
+      "id": "28f0ebfa-b03c-4aaf-a830-55d0059bf2d1",
+      "name": "🌟 New Inspiration",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99. Hidden/Templates/🌟 Inspiration Template.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "🌟 {{name}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "03. Notes/Inspirations/{{DATE:YYYYMM}}"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": true,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false
+    },
+    {
+      "id": "69bd3add-473d-471c-8c4a-1f7eab0e57fd",
+      "name": "🗂️ New Notebook",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99. Hidden/Templates/🗂️ Notebook Template.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "🗂️ {{name}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "03. Notes/Notebooks/{{name}}"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": true,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Nothing",
+      "setFileExistsBehavior": true
+    },
+    {
+      "id": "629709df-8641-4da7-828a-34a21abc486c",
+      "name": "📖 New Readwise",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99. Hidden/Templates/📖 Readwise Note.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "📖 {{name}} - {{DATE:YYYYMMDDHHmm}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "03. Notes/Readwise/{{DATE:YYYYMM}}"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": true,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Nothing",
+      "setFileExistsBehavior": true
+    },
+    {
+      "id": "26502dbc-33fe-42f9-aaf3-5c642c86c78c",
+      "name": "🔖 New Handbook",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99. Hidden/Templates/🔖 Handbook Template.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "🔖 {{name}} - {{DATE:YYYYMMDD}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "03. Notes/Manual/{{DATE:YYYYMM}}"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": true,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Nothing",
+      "setFileExistsBehavior": true
+    },
+    {
+      "id": "3b04422f-d5da-4b79-a9eb-1d6540995eb0",
+      "name": "📒 New Common",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99. Hidden/Templates/📒 Common Note Template.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "📒 {{name}} - {{DATE:YYYYMMDDHHmm}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "03. Notes/Common/{{DATE:YYYYMM}}"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": true,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": true
+    }
+  ],
+  "macros": [],
+  "inputPrompt": "single-line",
+  "devMode": false,
+  "templateFolderPath": "99. Hidden",
+  "announceUpdates": true,
+  "version": "1.11.1",
+  "disableOnlineFeatures": true,
+  "enableRibbonIcon": true,
+  "ai": {
+    "defaultModel": "Ask me",
+    "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\text{new}}:=w_{ij}^{\text{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write \"($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)\" inline.",
+    "promptTemplatesFolderPath": "",
+    "showAssistant": true,
+    "providers": [
+      {
+        "name": "OpenAI",
+        "endpoint": "https://api.openai.com/v1",
+        "apiKey": "",
+        "models": [
+          {
+            "name": "text-davinci-003",
+            "maxTokens": 4096
+          },
+          {
+            "name": "gpt-3.5-turbo",
+            "maxTokens": 4096
+          },
+          {
+            "name": "gpt-3.5-turbo-16k",
+            "maxTokens": 16384
+          },
+          {
+            "name": "gpt-3.5-turbo-1106",
+            "maxTokens": 16385
+          },
+          {
+            "name": "gpt-4",
+            "maxTokens": 8192
+          },
+          {
+            "name": "gpt-4-32k",
+            "maxTokens": 32768
+          },
+          {
+            "name": "gpt-4-1106-preview",
+            "maxTokens": 128000
+          },
+          {
+            "name": "gpt-4-turbo",
+            "maxTokens": 128000
+          },
+          {
+            "name": "gpt-4o",
+            "maxTokens": 128000
+          },
+          {
+            "name": "gpt-4o-mini",
+            "maxTokens": 128000
+          }
+        ]
+      }
+    ]
+  },
+  "migrations": {
+    "migrateToMacroIDFromEmbeddedMacro": true,
+    "useQuickAddTemplateFolder": true,
+    "incrementFileNameSettingMoveToDefaultBehavior": true,
+    "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
+    "setVersionAfterUpdateModalRelease": true,
+    "addDefaultAIProviders": true
+  }
+}
