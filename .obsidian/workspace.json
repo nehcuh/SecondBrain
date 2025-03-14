@@ -133,11 +133,22 @@
             "state": {
               "type": "recent-files",
               "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
+            }
+          },
+          {
+            "id": "04ee451800639dd5",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {},
               "icon": "clock",
               "title": "Recent Files"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -261,41 +272,10 @@
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "templater-obsidian:Templater": false,
       "quickadd:QuickAdd": false,
-      "omnisearch:Omnisearch": false,
-      "markdown-table-editor:Open Markdown Table Editor": false,
-      "homepage:Open homepage": false
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "00d768ceff196fdb",
+  "active": "04ee451800639dd5",
   "lastOpenFiles": [
-    "README.md",
-    "06. Resources/resource demo/🏞️ resource demo.md",
-    "08. Excalidraw/Drawing 2025-02-20 15.17.48.excalidraw.md",
-    "03. Notes/Periodic/Daily/📆 20250220_Thu.md",
-    "06. Resources/resource demo",
-    "04. Projects/白盒代码扫描一期建设/🏗️ 白盒代码扫描一期建设.md",
-    "04. Projects/白盒代码扫描一期建设",
-    "03. Notes/Common/202502/📒 fake common - 202502201516.md",
-    "03. Notes/Common/202502",
-    "02. Meetings/202502/📅 fake meeting - 202502201515.md",
-    "02. Meetings/202502",
-    "02.",
-    "06.",
-    "03.",
-    "07.",
-    "04.",
-    "99.",
-    "05. Areas/LLM 应用/🏕️ LLM 应用.md",
-    "03. Notes/Inspirations/202502/🌟 通过 AI 检查邮件.md",
-    "🏡 HomePage.md",
-    "99. Hidden/Templates/🏕️ Area Template.md",
-    "03. Notes/Clipping/202502/✂️ mcp bridge - 202502201440.md",
-    "01. Tasks/202502/02-20_Thu/✅ 跟踪 STAC 需求状态 - 202502201437.md",
-    "03. Notes/Notebooks/Rust 编程第一课/🗂️ Rust 编程第一课.md",
-    "03. Notes/Readwise/202409/📖 13｜类型系统：如何使用trait来定义接口？ - 202409022238.md",
-    "03. Notes/Readwise/202409/📖 10｜生命周期：你创建的值究竟能活多久？ - 202409162208.md",
-    "03. Notes/Readwise/202409/📖 08｜所有权：值的借用是如何工作的？ - 202409140947.md",
-    "03. Notes/Readwise/202409/📖 07｜所有权：值的生杀大权到底在谁手上？ - 202409071424.md",
-    "03. Notes/Readwise/202409/📖 09｜所有权：一个值可以有多个所有者么？ - 202409141905.md"
   ]
 }
