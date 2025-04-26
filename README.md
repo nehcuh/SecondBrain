@@ -3,10 +3,10 @@
 1. 下载我的[模板](https://github.com/nehcuh/SecondBrain)[GitHub - nehcuh/SecondBrain](https://github.com/nehcuh/SecondBrain) 到本地
 2. 本地安装[Obsidian](https://obsidian.md/)[Obsidian - Sharpen your thinking](https://obsidian.md/), 可以直接下载符合自己操作系统的安装包；此外，苹果用户可以通过 `homebrew` 直接安装，windows 用户可以通过 `winget` 安装，linux 用户可以通过 `apt/yum/homebrew` 等安装
 3. 打开 Obsidian, 然后选择打开 Vault, 打开刚才下载到本地的模板
-   ![[99. Hidden/Attachments/open_vault.png]]
+   !(99. Hidden/Attachments/open_vault.png)
 4. 打开模板的时候，Obsidian 会提示你是否开启 Community Plugins, 选择允许
 5. 最后，你会看到一个类似以下的界面，不要紧张，你现在不过是在编辑模式下，按一下快捷键 `Cmd+E` 或 `Ctrl+E` 就可以切换模板的编辑和阅读模式 
-   ![[99. Hidden/Attachments/first_view.png]]
+   !(99. Hidden/Attachments/first_view.png)
 6. **在 Obsidian 下面，可以通过 `![[` 来快速创建链接，并使得链接在当前笔记中可见，如果只希望做链接，而不希望内容可见，则使用 `[[` 即可。**
 
 ## 2. 🚦 界面说明
