@@ -6,7 +6,7 @@
    !(99. Hidden/Attachments/open_vault.png)
 4. 打开模板的时候，Obsidian 会提示你是否开启 Community Plugins, 选择允许
 5. 最后，你会看到一个类似以下的界面，不要紧张，你现在不过是在编辑模式下，按一下快捷键 `Cmd+E` 或 `Ctrl+E` 就可以切换模板的编辑和阅读模式 
-   !(99. Hidden/Attachments/first_view.png)
+   ![[99. Hidden/Attachments/first_view.png]]
 6. **在 Obsidian 下面，可以通过 `![[` 来快速创建链接，并使得链接在当前笔记中可见，如果只希望做链接，而不希望内容可见，则使用 `[[` 即可。**
 
 ## 2. 🚦 界面说明

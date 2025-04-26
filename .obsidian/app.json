@@ -10,5 +10,5 @@
     "downscalePercent": 100
   },
   "vimMode": true,
-  "newLinkFormat": "relative"
+  "newLinkFormat": "shortest"
 }
