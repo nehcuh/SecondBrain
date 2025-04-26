@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "⛏️ README.md",
-                "mode": "source",
+                "file": "README.md",
+                "mode": "preview",
                 "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,37 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "⛏️ README"
-            }
-          }
-        ]
-      },
-      {
-        "id": "d91d76996e1d6ed5",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "2fef890d0f8d6296",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02. Meetings/202504/📅 fake meeting - 202504261255.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "📅 fake meeting - 202504261255"
+              "title": "README"
             }
           }
         ]
@@ -243,9 +213,11 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "2fef890d0f8d6296",
+  "active": "d542905c00b57772",
   "lastOpenFiles": [
-    "⛏️ README.md",
+    "99. Hidden/Attachments/GTD Flow.webp",
+    "01. Tasks/202504/04-26_周六/✅ 重写 OB 的模板使用说明 - 202504261223.md",
+    "README.md",
     "02. Meetings/202504/📅 fake meeting - 202504261255.md",
     "99. Hidden/Attachments/area_template.png",
     "🏡 HomePage.md",
@@ -259,7 +231,6 @@
     "02. Meetings/202504",
     "99. Hidden/Templates/📅 Meeting Template.md",
     "99. Hidden/Attachments/done_example.png",
-    "01. Tasks/202504/04-26_周六/✅ 重写 OB 的模板使用说明 - 202504261223.md",
     "05. Areas/PKM",
     "99. Hidden/Attachments/task_template.png",
     "01. Tasks/202504/04-26_周六",
