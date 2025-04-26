@@ -9,5 +9,6 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "vimMode": true
+  "vimMode": true,
+  "newLinkFormat": "relative"
 }

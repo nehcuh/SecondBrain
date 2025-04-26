@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "README.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -213,7 +213,7 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "d542905c00b57772",
+  "active": "ea5426a3542fb53d",
   "lastOpenFiles": [
     "99. Hidden/Attachments/GTD Flow.webp",
     "01. Tasks/202504/04-26_周六/✅ 重写 OB 的模板使用说明 - 202504261223.md",

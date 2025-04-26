@@ -3,10 +3,10 @@
 1. 下载我的[模板](https://github.com/nehcuh/SecondBrain)[GitHub - nehcuh/SecondBrain](https://github.com/nehcuh/SecondBrain) 到本地
 2. 本地安装[Obsidian](https://obsidian.md/)[Obsidian - Sharpen your thinking](https://obsidian.md/), 可以直接下载符合自己操作系统的安装包；此外，苹果用户可以通过 `homebrew` 直接安装，windows 用户可以通过 `winget` 安装，linux 用户可以通过 `apt/yum/homebrew` 等安装
 3. 打开 Obsidian, 然后选择打开 Vault, 打开刚才下载到本地的模板
-   ![[open_vault.png]]
+   ![[99. Hidden/Attachments/open_vault.png]]
 4. 打开模板的时候，Obsidian 会提示你是否开启 Community Plugins, 选择允许
 5. 最后，你会看到一个类似以下的界面，不要紧张，你现在不过是在编辑模式下，按一下快捷键 `Cmd+E` 或 `Ctrl+E` 就可以切换模板的编辑和阅读模式 
-   ![[first_view.png]]
+   ![[99. Hidden/Attachments/first_view.png]]
 6. **在 Obsidian 下面，可以通过 `![[` 来快速创建链接，并使得链接在当前笔记中可见，如果只希望做链接，而不希望内容可见，则使用 `[[` 即可。**
 
 ## 2. 🚦 界面说明
@@ -15,10 +15,10 @@
    - 快速入口：用于快速创建需要的笔记
    - birdview: 可以快捷的看到当前个人仓库有哪些内容，因此，需要能够做到抽取不同目录下的文件信息
    - 待办和待阅：可以有一个页面，看到自己所有待办事项和待复习的事项
-   ![[homepage.png]]
-2. 目录结构：核心目录主要是基于 [`PARA`](https://sspai.com/post/78349)[我对 PARA 的理解与实践 - 少数派](https://sspai.com/post/78349) 理念创建的目录 `04. Project, 05. Areas, 06. Resources`，和在此基础上，结合 [`GTD`](https://sspai.com/post/40172)[10分钟学会使用GTD做任务管理 - 少数派](https://sspai.com/post/40172) 理念，创建的 `01.Tasks` 目录
-   ![[para.png]]
-3. 笔记结构：从我个人工作和生活来看，笔记类别我划分为几大类，包括：
+   ![[99. Hidden/Attachments/homepage.png]]
+1. 目录结构：核心目录主要是基于 [`PARA`](https://sspai.com/post/78349)[我对 PARA 的理解与实践 - 少数派](https://sspai.com/post/78349) 理念创建的目录 `04. Project, 05. Areas, 06. Resources`，和在此基础上，结合 [`GTD`](https://sspai.com/post/40172)[10分钟学会使用GTD做任务管理 - 少数派](https://sspai.com/post/40172) 理念，创建的 `01.Tasks` 目录
+   ![[99. Hidden/Attachments/para.png]]
+2. 笔记结构：从我个人工作和生活来看，笔记类别我划分为几大类，包括：
    - 剪贴板：用于快速记录网络或其他地方的看到的有趣内容
    - 灵感胶囊：用于记录一些快速闪过的灵感
    - 笔记本(notebooks): 归属于同一主题的笔记的汇总
@@ -33,30 +33,31 @@ GTD 即 Getting Things Done，我觉得其核心理念在于快速对事务的�
 在我的这个 OB 模板中，快速创建 TODO item，有两个入口，
 - 第一个入口在 `🏡 Homepage` 中，点击快速导航栏中的 `✅ New Task` 即可创建任务
 - 第二个入口则是通过快捷键 `Ctrl/Cmd+P` 然后输入 `✅ New Task` 即可创建任务
-  ![[new_task.png]]
+  ![[99. Hidden/Attachments/new_task.png]]
 所有新建的任务都会在 `01. Tasks` 目录中，同时标签页也会弹出相应的任务编辑页签，譬如我这里创建了一个任务 "重写 OB 的模板使用说明"，那么 Obsidian 就会打开一个任务，如下图所示：
-![[task_template.png]]
+![[99. Hidden/Attachments/task_template.png]]
+
 
 细心的你一定发现了这个 “待办项” 包含了一大堆的元数据 (metadata), 按照 GTD 的理念，当我们创建一个待办项的时候，同时就应该对该待办项有个认识，该待办是否立刻可以去处理，如果是的话，相应的元数据中的 `actionable` 就应该勾选上，否则就应该去除勾选。默认创建的新的待办都是 `actionable` 的，同时，相应的待办项也会有一个 `startTime`, 默认为当前待办项的创建时间。
 
 因为同时在实践 `PARA` 的工作方法，因此，相应的 `task` 理论上也应该有个归属，以方便在 `Project` 或者 `Area` 或者 `Resource` 中去追踪这个项目。当然，如果这个待办项 (task) 作废了，那就勾选上 `archived` 的标签，表示这个任务作废。
 
 最后，当这个任务完成以后，在 `⚡️ Quick Context` 中将相应的复选框勾选上，同时，还需要将任务的 metadata 中的 status 选上 `#done`. 好吧，我这里做的不够智能，原谅我对 OB 配置不熟。下面截图中，我随手创建了一个 task，考虑到这个 task 没有归属，我又快速创建了一个 Area，命名为 PKM，用于链接所有的个人知识管理的内容。
-![[done_example.png]]
+![[99. Hidden/Attachments/done_example.png]]
 
 ### 3.2 🔔 对于 GTD 的补充: 会议
 工作中我经常会遇到各种会议，相比普通的 task，我觉得会议应该单独列出来，因为考虑到会议后还有些内容需要补充，需要整理会议纪要等。因此，我单独创建了会议的模板，类似于 GTD，但是会单独放到目录 `02. Meetings` 中，当遇到会议的时候，我会快速创建一个会议。创建会议一样有两个入口：
 - 通过 `🏡 HomePage` 快速导航栏的 `📅 New Meeting` 按钮快速创建
 - 通过快捷键 `Ctrl/Cmd+P` 然后选择 `📅 New Meeting` 来创建 Meeting
 下面是一个 `Meeting` 的模板，核心信息包括：会议时间，地点，人物，内容，以及会议追踪
-![[meeting_template.png]]
+![[99. Hidden/Attachments/meeting_template.png]]
 
 ### 3.3 🚧 关于 Para 的实践
 我觉得 Fortie 关于 Para 的论述对普通人实践而言，还是比较难践行，因为包括 Area 和 Resource 的区分，真的好困难。后来看到少数派的网站上的一些人的分享，我觉得还是按照简单的方式来，即：
 - 如果有固定时限需要完成的某个主题，譬如，我需要在一个月内完成某本书的阅读，就可以创建一个 Project 来跟踪这个主题
 - Project 还可能会有 root project, 譬如某个需要持续时间比较长的主题，假设我负责采购引进并建设某个软件项目的时候，很可能会分多期来实现，因此，只需要设置子 project，不过我觉得不应该超过 2 个层级，层级一深，个人的精力会无法跟进
 - Area 则用于定义为自己想要持续精进的领域，譬如，我最近希望能在 Rust 上深入学习下，那么，我会创建一个 Area 并命名为 Rust. 在我个人实践中，我发现 Project 和 Area 经常会有交集，譬如，我希望深入学习 Rust，于是，我会设置不同的目标，在这个月学习这个视频，在那个月学习那本书。因此，在 Project 下面，我可以链接到相应的 Area 中，如下图所示：
-  ![[area_template.png]]
+  ![[99. Hidden/Attachments/area_template.png]]
 - 最后则是 Resource，我一般在这个类目会放些工作相关内容，有些很无聊的工作，我也懒得去梳理，一把丢到这个类目下，这个类目看的也比较少，省的影响心情。
 ### 3.4 🎨 关于画图
 其实，GTD 和 PARA 已经足够覆盖大部分自己的日常工作和生活场景了，但是，还缺失一块内容，那就是画图，因为，前面的内容都是聚焦在文字上，而实际生活中，我们经常需要去画图给人演示，或者自己去梳理脑图等，这里我强烈推荐的一个插件是 `Excalidraw`, 可以通过鼠标直接去快速画图，用于演示流程图等。
