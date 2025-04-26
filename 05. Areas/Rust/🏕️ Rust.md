@@ -1,17 +1,11 @@
 ---
-createdAt: 2025-02-20 15:17
+createdAt: 2025-04-26 12:49
 tags:
-  - "#project"
-status: 
-startDate: 
-due: 2025-02-20
-scheduled: 2025-02-20
-rootProject: 
-area: 
-goals: 
-milestones: 
+  - "#area"
 cssclasses:
   - kanban
+rootArea: 
+goals:
 ---
 ## 👀 Bird View
 - ✅ Tasks
@@ -23,9 +17,7 @@ cssclasses:
 		endTime AS End, 
 		contacts AS Contacts
 	FROM [[]]
-	WHERE (date(due) = date(2025-02-20) 
-	OR date(date) =date(2025-02-20))
-	AND !contains(file.path, "99. Hidden") 
+	WHERE !contains(file.path, "99. Hidden") 
 	AND contains(file.tags, "#task")
 	AND status != "#canceled" AND status != "#done"
 	AND !archived 
@@ -64,8 +56,8 @@ cssclasses:
 	SORT createdAt asc
    ```
 - 🙌 Reminder
-	- [ ] 项目进度追踪 🔁 every day 
-	- [ ] 风险事项跟踪 🔁 every day 
+	- [ ] 资料汇总 🔁 every day 
+	- [ ] 复习资料 🔁 every day 
 
 ## 🖇️ References
 
