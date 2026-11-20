@@ -43,7 +43,7 @@ git clone https://github.com/nehcuh/SecondBrain.git
 - **templater-obsidian**（必须）——QuickAdd 建卡走模板
 - **homepage**——打开 Obsidian 直达 🏠 Home
 - calendar / heatmap-tracker / iconize / quickadd / rainbow-* —— 看板与打卡热力图
-- **newton**——AI 助手（可选，见第 4 步）
+- **newton**——AI 助手（可选，见第 4 步；[插件源码](https://github.com/nehcuh/newton)）
 
 ### 3. 跑一遍校验（确认环境 OK）
 
