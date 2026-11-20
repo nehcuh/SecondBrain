@@ -1,0 +1,46 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Learning 渐进式学习",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n\n> 来源：{{url}}\n\n## 原文摘录\n\n{{content}}\n\n## AI 摘要\n\n\n## 核心提炼\n\n\n## 我的思考\n\n\n## 行动项\n\n- [ ] \n",
+	"properties": [
+		{
+			"name": "type",
+			"value": "note",
+			"type": "text"
+		},
+		{
+			"name": "subtype",
+			"value": "learning",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "status",
+			"value": "reading",
+			"type": "text"
+		},
+		{
+			"name": "area",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "note",
+			"type": "multitext"
+		},
+		{
+			"name": "createdAt",
+			"value": "{{date}}",
+			"type": "date"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "📖 {{title}}",
+	"path": "05 Notes/Learning/{{date:YYYY}}/{{date:MM}}"
+}

@@ -1,0 +1,44 @@
+{
+  "template_folder": "99 Templates",
+  "auto_jump_to_cursor": true,
+  "trigger_on_file_creation": true,
+  "enable_system_commands": false,
+  "folder_templates": [
+    {
+      "folder": "05 Notes/Knowledge",
+      "template": "99 Templates/Notes/Knowledge.md"
+    },
+    {
+      "folder": "05 Notes/Clip",
+      "template": "99 Templates/Notes/Clip.md"
+    },
+    {
+      "folder": "06 Tasks",
+      "template": "99 Templates/Tasks/Task.md"
+    },
+    {
+      "folder": "07 Habits",
+      "template": "99 Templates/Habits/Habit.md"
+    },
+    {
+      "folder": "05 Notes/Inspiration",
+      "template": "99 Templates/Notes/Inspiration.md"
+    },
+    {
+      "folder": "05 Notes/Learning",
+      "template": "99 Templates/Notes/Learning.md"
+    },
+    {
+      "folder": "05 Notes/Handbook",
+      "template": "99 Templates/Notes/Handbook.md"
+    },
+    {
+      "folder": "01 Goals",
+      "template": "99 Templates/Goals/Goal-Quarterly.md"
+    },
+    {
+      "folder": "05 Notes/Contacts",
+      "template": "99 Templates/Contacts/Contact.md"
+    }
+  ]
+}

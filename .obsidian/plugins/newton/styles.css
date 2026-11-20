@@ -1,0 +1,792 @@
+/* Newton（牛顿）— SecondBrain智能中枢 */
+
+/* Obsidian 移动端 .is-mobile button 等类型选择器特异性 (0,1,1) 压过单类 (0,1,0)：
+   按钮被塞回默认 padding/宽度，内部 svg 作为 flex 子项收缩为 0 宽（iPad 实录图标空白）。
+   按钮类选择器一律双写类名抬到 (0,2,0) 顶回；实机验证：svg 0px→15px。 */
+
+/* ── 布局骨架 ── */
+.sb-ai-chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  position: relative;
+  --sb-accent: var(--interactive-accent);
+  --sb-radius: 12px;
+}
+
+.sb-ai-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  flex-shrink: 0;
+}
+
+.sb-ai-header-text {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.sb-ai-header-title {
+  font-weight: 700;
+  font-size: 1.02em;
+  letter-spacing: 0.2px;
+}
+
+.sb-ai-header-sub {
+  font-size: 0.78em;
+  opacity: 0.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sb-ai-header-ver {
+  font-size: 0.72em;
+  opacity: 0.4;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+button.sb-ai-icon-btn.sb-ai-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 8px;
+  border: 1px solid var(--background-modifier-border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  flex-shrink: 0;
+  font-size: 0.9em;
+}
+
+button.sb-ai-icon-btn.sb-ai-icon-btn:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+
+/* lucide 图标（icons.ts 内嵌 svg）随按钮 currentColor 走，只定尺寸 */
+.sb-ai-icon-btn svg.svg-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.sb-ai-chat-log {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px 12px 8px;
+  scrollbar-width: thin;
+}
+
+.sb-ai-chat-log::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sb-ai-chat-log::-webkit-scrollbar-thumb {
+  background: var(--background-modifier-border);
+  border-radius: 3px;
+}
+
+.sb-ai-hello {
+  opacity: 0.55;
+  padding: 24px 12px;
+  text-align: center;
+  font-size: 0.9em;
+  line-height: 1.7;
+}
+
+/* ── 欢迎页 ── */
+.sb-ai-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 42px 16px 24px;
+  text-align: center;
+}
+
+.sb-ai-welcome-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  color: var(--sb-accent);
+  margin-bottom: 4px;
+}
+
+.sb-ai-welcome-avatar svg {
+  width: 24px;
+  height: 24px;
+}
+
+.sb-ai-welcome-title {
+  font-weight: 700;
+  font-size: 1.1em;
+  letter-spacing: 0.3px;
+}
+
+.sb-ai-welcome-sub {
+  opacity: 0.55;
+  font-size: 0.85em;
+  max-width: 34em;
+  line-height: 1.6;
+}
+
+.sb-ai-welcome-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+button.sb-ai-chip.sb-ai-chip {
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  color: var(--text-muted);
+  border-radius: 999px;
+  padding: 5px 13px;
+  font-size: 0.84em;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+button.sb-ai-chip.sb-ai-chip:hover {
+  border-color: var(--sb-accent);
+  color: var(--text-normal);
+}
+
+/* ── 消息行（Claude 式：助手全宽带头像，用户右气泡） ── */
+.sb-ai-msg-row {
+  margin: 10px 0;
+}
+
+.sb-ai-row-assistant {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.sb-ai-side {
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.sb-ai-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  color: var(--sb-accent);
+}
+
+.sb-ai-avatar svg {
+  width: 14px;
+  height: 14px;
+}
+
+.sb-ai-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.sb-ai-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 0.78em;
+  margin-bottom: 3px;
+  color: var(--text-muted);
+}
+
+.sb-ai-time {
+  opacity: 0.65;
+}
+
+.sb-ai-row-user {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.sb-ai-msg {
+  padding: 9px 13px;
+  border-radius: var(--sb-radius);
+  line-height: 1.6;
+  font-size: 0.92em;
+  word-break: break-word;
+}
+
+.sb-ai-row-assistant .sb-ai-msg {
+  max-width: 100%;
+}
+
+.sb-ai-row-user .sb-ai-msg {
+  max-width: 88%;
+}
+
+.sb-ai-user {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border-bottom-right-radius: 4px;
+  white-space: pre-wrap;
+}
+
+.sb-ai-assistant {
+  background: var(--background-secondary);
+  border-left: 3px solid var(--sb-accent);
+  border-bottom-left-radius: 4px;
+}
+
+.sb-ai-error {
+  border-left-color: var(--text-error);
+}
+
+/* ── 消息动作条（常显弱化，hover 全亮：iPad 外接指针时 hover:none 不命中，不能依赖媒体查询藏显） ── */
+.sb-ai-acts {
+  display: flex;
+  gap: 2px;
+  margin-top: 2px;
+  opacity: 0.45;
+  transition: opacity 0.12s ease;
+}
+
+.sb-ai-row-user .sb-ai-acts {
+  justify-content: flex-end;
+}
+
+.sb-ai-msg-row:hover .sb-ai-acts,
+.sb-ai-acts:focus-within {
+  opacity: 1;
+}
+
+button.sb-ai-act.sb-ai-act {
+  width: 26px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--text-faint);
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+button.sb-ai-act.sb-ai-act:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+
+.sb-ai-act svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* ── 加载三点 ── */
+.sb-ai-loading-row {
+  opacity: 0.9;
+}
+
+.sb-ai-dots {
+  display: inline-flex;
+  gap: 4px;
+  padding: 10px 2px 0;
+}
+
+.sb-ai-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  animation: sb-ai-bounce 1.2s infinite ease-in-out;
+}
+
+.sb-ai-dots span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.sb-ai-dots span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes sb-ai-bounce {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+  40% { transform: translateY(-4px); opacity: 1; }
+}
+
+/* 气泡内 markdown 排版 */
+.sb-ai-assistant > div > p {
+  margin: 0.35em 0;
+}
+
+.sb-ai-assistant > div > p:first-child {
+  margin-top: 0;
+}
+
+.sb-ai-assistant > div > p:last-child {
+  margin-bottom: 0;
+}
+
+.sb-ai-assistant > div > ul,
+.sb-ai-assistant > div > ol {
+  margin: 0.35em 0;
+  padding-left: 1.5em;
+}
+
+.sb-ai-assistant > div > h1,
+.sb-ai-assistant > div > h2,
+.sb-ai-assistant > div > h3 {
+  font-size: 1.05em;
+  margin: 0.6em 0 0.3em;
+  color: var(--text-normal);
+}
+
+.sb-ai-assistant > div code {
+  background: var(--background-modifier-hover);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.88em;
+}
+
+.sb-ai-assistant > div pre {
+  background: var(--background-primary-alt);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  overflow-x: auto;
+}
+
+.sb-ai-assistant > div pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.sb-ai-assistant > div blockquote {
+  margin: 0.4em 0;
+  padding: 2px 10px;
+  border-left: 3px solid var(--sb-accent);
+  color: var(--text-muted);
+}
+
+.sb-ai-assistant > div a,
+.sb-ai-assistant > div .internal-link {
+  color: var(--sb-accent);
+}
+
+.sb-ai-assistant > div .internal-link {
+  text-decoration: none;
+  border-bottom: 1px dotted var(--sb-accent);
+}
+
+/* ── 思考中动画 ── */
+.sb-ai-loading {
+  opacity: 0.75;
+}
+
+/* ── 发送按钮（圆形主色，内嵌图标） ── */
+button.sb-ai-send.sb-ai-send {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sb-ai-send svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* ── 编辑重发弹窗 ── */
+.sb-ai-edit-modal textarea {
+  width: 100%;
+  min-height: 6em;
+  margin: 8px 0;
+}
+
+.sb-ai-edit-hint {
+  opacity: 0.6;
+  font-size: 0.85em;
+  margin: 2px 0 0;
+}
+
+.sb-ai-edit-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* ── 动作/查询结果条 ── */
+.sb-ai-action-result {
+  margin: 4px 0 10px;
+  padding: 6px 11px;
+  border-left: 3px solid var(--sb-accent);
+  border-radius: 6px;
+  background: var(--background-secondary);
+  font-size: 0.82em;
+  line-height: 1.55;
+  opacity: 0.92;
+  white-space: pre-wrap;
+  max-width: 90%;
+}
+
+/* ── 长任务清单 ── */
+.sb-ai-task-checklist {
+  margin: 6px 0 12px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 10px;
+  background: var(--background-secondary);
+  max-width: 92%;
+  overflow: hidden;
+}
+
+.sb-ai-task-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  font-size: 0.8em;
+  color: var(--text-muted);
+}
+
+.sb-ai-task-state.is-ok {
+  color: var(--text-success, #4ba26a);
+  font-weight: 600;
+}
+
+.sb-ai-task-state.is-stop {
+  color: var(--text-warning, #c88a3d);
+  font-weight: 600;
+}
+
+button.sb-ai-task-resume.sb-ai-task-resume {
+  font-size: 0.9em;
+  padding: 2px 10px;
+}
+
+.sb-ai-task-list {
+  padding: 4px 0;
+}
+
+.sb-ai-task-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  font-size: 0.85em;
+  line-height: 1.45;
+}
+
+.sb-ai-task-box {
+  flex-shrink: 0;
+  width: 1.2em;
+  text-align: center;
+  color: var(--text-faint);
+}
+
+.sb-ai-task-item.is-done .sb-ai-task-box {
+  color: var(--text-success, #4ba26a);
+}
+
+.sb-ai-task-text {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.sb-ai-task-item.is-done .sb-ai-task-text {
+  color: var(--text-faint);
+  text-decoration: line-through;
+}
+
+button.sb-ai-task-manual.sb-ai-task-manual {
+  flex-shrink: 0;
+  font-size: 0.85em;
+  padding: 1px 8px;
+}
+
+/* ── 输入区 ── */
+.sb-ai-input-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* ── 附件 ── */
+.sb-ai-file-input {
+  display: none;
+}
+
+.sb-ai-attach-row {
+  display: none;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 10px 6px;
+}
+
+.sb-ai-attach-row.is-open {
+  display: flex;
+}
+
+.sb-ai-attach-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 60%;
+  padding: 4px 6px 4px 9px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  background: var(--background-secondary);
+  font-size: 0.8em;
+  color: var(--text-muted);
+}
+
+.sb-ai-attach-ico {
+  display: inline-flex;
+  color: var(--sb-accent);
+  flex-shrink: 0;
+}
+
+.sb-ai-attach-ico svg {
+  width: 13px;
+  height: 13px;
+}
+
+.sb-ai-attach-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sb-ai-attach-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.14);
+  font-size: 0.8em;
+  max-width: 12em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 4px;
+}
+
+.sb-ai-attach-tag .sb-ai-attach-ico {
+  color: inherit;
+}
+
+.sb-ai-attach-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.sb-ai-chat-bar {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  margin: 8px 10px 10px;
+  padding: 7px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--sb-radius);
+  background: var(--background-secondary);
+  transition: border-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.sb-ai-chat-bar:focus-within {
+  border-color: var(--sb-accent);
+  box-shadow: 0 0 0 1px var(--sb-accent);
+}
+
+.sb-ai-chat-bar textarea {
+  flex: 1;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  resize: none;
+  font-size: 0.92em;
+  line-height: 1.5;
+  min-height: 2.4em;
+  max-height: 9em;
+  padding: 4px 2px;
+}
+
+.sb-ai-chat-bar textarea:focus {
+  box-shadow: none;
+  border: none;
+}
+
+button.sb-ai-send.sb-ai-send {
+  border-radius: 9px;
+  flex-shrink: 0;
+}
+
+.sb-ai-mic-active {
+  color: var(--text-error);
+  border-color: var(--text-error);
+  animation: sb-ai-pulse 1.5s infinite;
+}
+
+@keyframes sb-ai-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+/* ── 快速捕获弹窗 ── */
+.sb-ai-capture {
+  padding: 4px 8px;
+}
+
+.sb-ai-capture h3 {
+  margin-top: 4px;
+}
+
+.sb-ai-capture input[type="text"] {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 9px;
+}
+
+.sb-ai-capture-row {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.sb-ai-capture-row button {
+  border-radius: 9px;
+}
+
+.sb-ai-capture-status {
+  font-size: 0.85em;
+  opacity: 0.7;
+  min-height: 1.2em;
+  margin: 6px 0 0;
+}
+
+/* ── 搜索 ── */
+.sb-ai-search-path {
+  display: block;
+  opacity: 0.55;
+  font-size: 0.85em;
+}
+
+/* ── 历史会话面板 ── */
+.sb-ai-history {
+  display: none;
+  position: absolute;
+  top: 52px;
+  left: 10px;
+  right: 10px;
+  max-height: 55%;
+  overflow-y: auto;
+  z-index: 20;
+  background: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+  scrollbar-width: thin;
+}
+
+.sb-ai-history.is-open {
+  display: block;
+}
+
+.sb-ai-history-empty {
+  padding: 18px 12px;
+  text-align: center;
+  opacity: 0.55;
+  font-size: 0.88em;
+}
+
+.sb-ai-history-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px 7px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--background-modifier-border-hover);
+}
+
+.sb-ai-history-item:last-child {
+  border-bottom: none;
+}
+
+.sb-ai-history-item:hover {
+  background: var(--background-modifier-hover);
+}
+
+.sb-ai-history-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.sb-ai-history-title {
+  font-size: 0.9em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sb-ai-history-branch {
+  color: var(--sb-accent);
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.sb-ai-history-branch svg {
+  width: 12px;
+  height: 12px;
+}
+
+.sb-ai-history-time {
+  font-size: 0.75em;
+  opacity: 0.5;
+}
+
+.sb-ai-history-del {
+  width: 24px;
+  height: 24px;
+  font-size: 0.75em;
+  border: none;
+  opacity: 0;
+  flex-shrink: 0;
+}
+
+.sb-ai-history-item:hover .sb-ai-history-del {
+  opacity: 0.7;
+}

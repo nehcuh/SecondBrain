@@ -1,0 +1,46 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Clip 快速剪藏",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n\n> 来源：{{url}}\n\n## 原文\n\n{{content}}\n\n## 为什么收藏\n\n\n## 后续\n\n- [ ] 精读\n- [ ] 灵感\n- [ ] 归档\n- [ ] 删除\n",
+	"properties": [
+		{
+			"name": "type",
+			"value": "note",
+			"type": "text"
+		},
+		{
+			"name": "subtype",
+			"value": "clip",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "status",
+			"value": "inbox",
+			"type": "text"
+		},
+		{
+			"name": "area",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "clip",
+			"type": "multitext"
+		},
+		{
+			"name": "createdAt",
+			"value": "{{date}}",
+			"type": "date"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "📎 {{title}}",
+	"path": "05 Notes/Clip/{{date:YYYY}}/{{date:MM}}"
+}

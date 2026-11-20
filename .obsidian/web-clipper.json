@@ -1,0 +1,176 @@
+[
+	{
+		"schemaVersion": "0.1.0",
+		"name": "Clip 快速剪藏",
+		"behavior": "create",
+		"noteContentFormat": "# {{title}}\n\n> 来源：{{url}}\n\n## 原文\n\n{{content}}\n\n## 为什么收藏\n\n\n## 后续\n\n- [ ] 精读\n- [ ] 灵感\n- [ ] 归档\n- [ ] 删除\n",
+		"properties": [
+			{
+				"name": "type",
+				"value": "note",
+				"type": "text"
+			},
+			{
+				"name": "subtype",
+				"value": "clip",
+				"type": "text"
+			},
+			{
+				"name": "source",
+				"value": "{{url}}",
+				"type": "text"
+			},
+			{
+				"name": "status",
+				"value": "inbox",
+				"type": "text"
+			},
+			{
+				"name": "area",
+				"value": "",
+				"type": "text"
+			},
+			{
+				"name": "tags",
+				"value": "clip",
+				"type": "multitext"
+			},
+			{
+				"name": "createdAt",
+				"value": "{{date}}",
+				"type": "date"
+			}
+		],
+		"triggers": [],
+		"noteNameFormat": "📎 {{title}}",
+		"path": "05 Notes/Clip/{{date:YYYY}}/{{date:MM}}"
+	},
+	{
+		"schemaVersion": "0.1.0",
+		"name": "Handbook 手册参考",
+		"behavior": "create",
+		"noteContentFormat": "# {{title}}\n\n> 来源：{{url}}\n\n## 概述\n\n{{content}}\n\n## 核心内容\n\n\n## 参考\n\n- {{url}}\n",
+		"properties": [
+			{
+				"name": "type",
+				"value": "note",
+				"type": "text"
+			},
+			{
+				"name": "subtype",
+				"value": "handbook",
+				"type": "text"
+			},
+			{
+				"name": "source",
+				"value": "{{url}}",
+				"type": "text"
+			},
+			{
+				"name": "area",
+				"value": "",
+				"type": "text"
+			},
+			{
+				"name": "tags",
+				"value": "note",
+				"type": "multitext"
+			},
+			{
+				"name": "createdAt",
+				"value": "{{date}}",
+				"type": "date"
+			}
+		],
+		"triggers": [],
+		"noteNameFormat": "📋 {{title}}",
+		"path": "05 Notes/Handbook"
+	},
+	{
+		"schemaVersion": "0.1.0",
+		"name": "Learning 渐进式学习",
+		"behavior": "create",
+		"noteContentFormat": "# {{title}}\n\n> 来源：{{url}}\n\n## 原文摘录\n\n{{content}}\n\n## AI 摘要\n\n\n## 核心提炼\n\n\n## 我的思考\n\n\n## 行动项\n\n- [ ] \n",
+		"properties": [
+			{
+				"name": "type",
+				"value": "note",
+				"type": "text"
+			},
+			{
+				"name": "subtype",
+				"value": "learning",
+				"type": "text"
+			},
+			{
+				"name": "source",
+				"value": "{{url}}",
+				"type": "text"
+			},
+			{
+				"name": "status",
+				"value": "reading",
+				"type": "text"
+			},
+			{
+				"name": "area",
+				"value": "",
+				"type": "text"
+			},
+			{
+				"name": "tags",
+				"value": "note",
+				"type": "multitext"
+			},
+			{
+				"name": "createdAt",
+				"value": "{{date}}",
+				"type": "date"
+			}
+		],
+		"triggers": [],
+		"noteNameFormat": "📖 {{title}}",
+		"path": "05 Notes/Learning/{{date:YYYY}}/{{date:MM}}"
+	},
+	{
+		"schemaVersion": "0.1.0",
+		"name": "Spark 灵感火花",
+		"behavior": "create",
+		"noteContentFormat": "# {{title}}\n\n> 来源：{{url}}\n\n## 为什么重要\n\n{{description}}\n\n## 怎么做\n\n- [ ] \n",
+		"properties": [
+			{
+				"name": "type",
+				"value": "note",
+				"type": "text"
+			},
+			{
+				"name": "subtype",
+				"value": "inspiration",
+				"type": "text"
+			},
+			{
+				"name": "status",
+				"value": "spark",
+				"type": "text"
+			},
+			{
+				"name": "area",
+				"value": "",
+				"type": "text"
+			},
+			{
+				"name": "tags",
+				"value": "inspiration",
+				"type": "multitext"
+			},
+			{
+				"name": "createdAt",
+				"value": "{{date}}",
+				"type": "date"
+			}
+		],
+		"triggers": [],
+		"noteNameFormat": "💡 {{title}}",
+		"path": "05 Notes/Inspiration"
+	}
+]

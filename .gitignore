@@ -1,0 +1,20 @@
+# 活跃外部工具数据（不入库）
+.vibe/
+.smart-env/
+
+# Obsidian 个人态（非产品态）
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Python 工具链
+.venv/
+__pycache__/
+*.pyc
+
+# 系统垃圾
+.DS_Store
+.trash/
+*.icloud
+
+# Newton 插件本机数据（含 API Key，不入库）
+.obsidian/plugins/newton/data.json

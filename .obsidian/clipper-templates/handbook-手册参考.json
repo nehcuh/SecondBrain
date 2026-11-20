@@ -1,0 +1,41 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Handbook 手册参考",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n\n> 来源：{{url}}\n\n## 概述\n\n{{content}}\n\n## 核心内容\n\n\n## 参考\n\n- {{url}}\n",
+	"properties": [
+		{
+			"name": "type",
+			"value": "note",
+			"type": "text"
+		},
+		{
+			"name": "subtype",
+			"value": "handbook",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "area",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "note",
+			"type": "multitext"
+		},
+		{
+			"name": "createdAt",
+			"value": "{{date}}",
+			"type": "date"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "📋 {{title}}",
+	"path": "05 Notes/Handbook"
+}

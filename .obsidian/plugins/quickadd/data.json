@@ -1,0 +1,665 @@
+{
+  "choices": [
+    {
+      "id": "a1b2c3d4-0001-0001-0001-000000000002",
+      "name": "✅ 新建任务",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99 Templates/Tasks/Task.md",
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "06 Tasks"
+        ],
+        "chooseWhenCreatingNote": false
+      },
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{DATE:YYYY}}/{{DATE:MM}}/{{VALUE:任务标题}}_{{DATE:MMDD}}"
+      },
+      "openFile": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "horizontal",
+        "focus": true
+      },
+      "appendLink": false,
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      },
+      "fileOpening": {
+        "location": "tab",
+        "direction": "horizontal",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "a1b2c3d4-0001-0001-0001-000000000003",
+      "name": "📖 学习笔记",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99 Templates/Notes/Learning.md",
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "05 Notes/Learning"
+        ],
+        "chooseWhenCreatingNote": false
+      },
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{DATE:YYYY}}/{{DATE:MM}}/📖 {{VALUE:笔记标题}}"
+      },
+      "openFile": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "horizontal",
+        "focus": true
+      },
+      "appendLink": false,
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      },
+      "fileOpening": {
+        "location": "tab",
+        "direction": "horizontal",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "a1b2c3d4-0001-0001-0001-000000000004",
+      "name": "📋 手册",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99 Templates/Notes/Handbook.md",
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "05 Notes/Handbook"
+        ],
+        "chooseWhenCreatingNote": false
+      },
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{DATE:YYYY}}/{{DATE:MM}}/📋 {{VALUE:标题}}"
+      },
+      "openFile": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "horizontal",
+        "focus": true
+      },
+      "appendLink": false,
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      },
+      "fileOpening": {
+        "location": "tab",
+        "direction": "horizontal",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "a1b2c3d4-0001-0001-0001-000000000005",
+      "name": "🤝 会议记录",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99 Templates/Meetings/Meeting.md",
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "05 Notes/Meetings"
+        ],
+        "chooseWhenCreatingNote": false
+      },
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{DATE:YYYY}}/{{DATE:MM}}/🤝 {{VALUE:会议主题}}_{{DATE:YYYY-MM-DD}}"
+      },
+      "openFile": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "horizontal",
+        "focus": true
+      },
+      "appendLink": false,
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      },
+      "fileOpening": {
+        "location": "tab",
+        "direction": "horizontal",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "a1b2c3d4-0001-0001-0001-000000000006a",
+      "name": "🎯 年度目标",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99 Templates/Goals/Goal-Annual.md",
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "01 Goals/{{DATE:YYYY}}"
+        ],
+        "chooseWhenCreatingNote": false
+      },
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "🎯 {{VALUE:目标标题}}"
+      },
+      "openFile": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "horizontal",
+        "focus": true
+      },
+      "appendLink": false,
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      },
+      "fileOpening": {
+        "location": "tab",
+        "direction": "horizontal",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "a1b2c3d4-0001-0001-0001-000000000006b",
+      "name": "🎯 季度目标",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99 Templates/Goals/Goal-Quarterly.md",
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "01 Goals/{{DATE:YYYY}}/Q{{DATE:Q}}"
+        ],
+        "chooseWhenCreatingNote": true
+      },
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "🎯 {{VALUE:目标标题}}"
+      },
+      "openFile": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "horizontal",
+        "focus": true
+      },
+      "appendLink": false,
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      },
+      "fileOpening": {
+        "location": "tab",
+        "direction": "horizontal",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "a1b2c3d4-0001-0001-0001-000000000006c",
+      "name": "🎯 月度目标",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99 Templates/Goals/Goal-Monthly.md",
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "01 Goals/{{DATE:YYYY}}/Q{{DATE:Q}}/{{DATE:MM}}"
+        ],
+        "chooseWhenCreatingNote": true
+      },
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "🎯 {{VALUE:目标标题}}"
+      },
+      "openFile": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "horizontal",
+        "focus": true
+      },
+      "appendLink": false,
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      },
+      "fileOpening": {
+        "location": "tab",
+        "direction": "horizontal",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "a1b2c3d4-0001-0001-0001-000000000007",
+      "name": "🔄 新建习惯",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99 Templates/Habits/Habit.md",
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "07 Habits"
+        ],
+        "chooseWhenCreatingNote": false
+      },
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "🔄 {{VALUE:习惯名称}}"
+      },
+      "openFile": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "horizontal",
+        "focus": true
+      },
+      "appendLink": false,
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      },
+      "fileOpening": {
+        "location": "tab",
+        "direction": "horizontal",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "a1b2c3d4-0001-0001-0001-000000000008",
+      "name": "👤 新建联系人",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99 Templates/Contacts/Contact.md",
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "05 Notes/Contacts"
+        ],
+        "chooseWhenCreatingNote": false
+      },
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "👤 {{VALUE:姓名}}"
+      },
+      "openFile": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "horizontal",
+        "focus": true
+      },
+      "appendLink": false,
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      },
+      "fileOpening": {
+        "location": "tab",
+        "direction": "horizontal",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "a1b2c3d4-0001-0001-0001-000000000009",
+      "name": "📂 新建领域",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99 Templates/Areas/Area.md",
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "02 Areas"
+        ],
+        "chooseWhenCreatingNote": false
+      },
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{VALUE:领域名称}}/📂 {{VALUE:领域名称}}"
+      },
+      "openFile": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "horizontal",
+        "focus": true
+      },
+      "appendLink": false,
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      },
+      "fileOpening": {
+        "location": "tab",
+        "direction": "horizontal",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "a1b2c3d4-0001-0001-0001-000000000010",
+      "name": "🚀 新建项目",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99 Templates/Projects/Project.md",
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "03 Projects"
+        ],
+        "chooseWhenCreatingNote": false
+      },
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{DATE:YYYY}}/{{VALUE:项目名称}}/🚀 {{VALUE:项目名称}}"
+      },
+      "openFile": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "horizontal",
+        "focus": true
+      },
+      "appendLink": false,
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      },
+      "fileOpening": {
+        "location": "tab",
+        "direction": "horizontal",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "a1b2c3d4-0001-0001-0001-000000000011",
+      "name": "💡 灵感速记",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99 Templates/Notes/Inspiration.md",
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "05 Notes/Inspiration"
+        ],
+        "chooseWhenCreatingNote": false
+      },
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "💡 {{VALUE:灵感标题}}"
+      },
+      "openFile": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "horizontal",
+        "focus": true
+      },
+      "appendLink": false,
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      },
+      "fileOpening": {
+        "location": "tab",
+        "direction": "horizontal",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "a1b2c3d4-0001-0001-0001-000000000012",
+      "name": "📓 新建主题",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99 Templates/Topics/Topic.md",
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "05 Notes/Topics"
+        ],
+        "chooseWhenCreatingNote": false
+      },
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{VALUE:主题名称}}/📓 {{VALUE:主题名称}}"
+      },
+      "openFile": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "horizontal",
+        "focus": true
+      },
+      "appendLink": false,
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      },
+      "fileOpening": {
+        "location": "tab",
+        "direction": "horizontal",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "a1b2c3d4-0001-0001-0001-000000000013",
+      "name": "✍️ 新建博文",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99 Templates/Notes/Blog.md",
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "05 Notes/Blog"
+        ],
+        "chooseWhenCreatingNote": true
+      },
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{DATE:YYYYMM}}/{{VALUE:文章标题}}/✍️ {{VALUE:文章标题}}"
+      },
+      "openFile": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "horizontal",
+        "focus": true
+      },
+      "appendLink": false,
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      },
+      "fileOpening": {
+        "location": "tab",
+        "direction": "horizontal",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "a1b2c3d4-0001-0001-0001-000000000014",
+      "name": "📎 网页剪藏",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99 Templates/Notes/Clip.md",
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "05 Notes/Clip"
+        ],
+        "chooseWhenCreatingNote": false
+      },
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{DATE:YYYY}}/{{DATE:MM}}/📎 {{VALUE:标题}}"
+      },
+      "openFile": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "horizontal",
+        "focus": true
+      },
+      "appendLink": false,
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      },
+      "fileOpening": {
+        "location": "tab",
+        "direction": "horizontal",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "a1b2c3d4-0001-0001-0001-000000000015",
+      "name": "📌 知识卡片",
+      "type": "Template",
+      "command": true,
+      "templatePath": "99 Templates/Notes/Knowledge.md",
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "05 Notes/Knowledge"
+        ],
+        "chooseWhenCreatingNote": false
+      },
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{DATE:YYYY}}/{{DATE:MM}}/📌 {{VALUE:知识点标题}}"
+      },
+      "openFile": true,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "horizontal",
+        "focus": true
+      },
+      "appendLink": false,
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      },
+      "fileOpening": {
+        "location": "tab",
+        "direction": "horizontal",
+        "focus": true,
+        "mode": "default"
+      }
+    }
+  ],
+  "inputPrompt": "single-line",
+  "persistInputPromptDrafts": true,
+  "useSelectionAsCaptureValue": true,
+  "devMode": false,
+  "templateFolderPath": "",
+  "announceUpdates": "major",
+  "version": "2.12.3",
+  "globalVariables": {},
+  "onePageInputEnabled": false,
+  "disableOnlineFeatures": true,
+  "enableRibbonIcon": false,
+  "showCaptureNotification": true,
+  "showInputCancellationNotification": false,
+  "enableTemplatePropertyTypes": false,
+  "dateAliases": {
+    "t": "today",
+    "tm": "tomorrow",
+    "yd": "yesterday",
+    "nw": "next week",
+    "nm": "next month",
+    "ny": "next year",
+    "lw": "last week",
+    "lm": "last month",
+    "ly": "last year"
+  },
+  "ai": {
+    "defaultModel": "Ask me",
+    "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\\text{new}}:=w_{ij}^{\\text{current}}+\\eta\\cdot\\delta_j\\cdot x_{ij}$$ on a separate line, but you can write \"($\\eta$ = learning rate, $\\delta_j$ = error term, $x_{ij}$ = input)\" inline.",
+    "promptTemplatesFolderPath": "",
+    "showAssistant": true,
+    "providers": [
+      {
+        "name": "OpenAI",
+        "endpoint": "https://api.openai.com/v1",
+        "apiKey": "",
+        "models": [
+          {
+            "name": "gpt-3.5-turbo",
+            "maxTokens": 4096
+          },
+          {
+            "name": "gpt-3.5-turbo-16k",
+            "maxTokens": 16384
+          },
+          {
+            "name": "gpt-3.5-turbo-1106",
+            "maxTokens": 16385
+          },
+          {
+            "name": "gpt-4",
+            "maxTokens": 8192
+          },
+          {
+            "name": "gpt-4-32k",
+            "maxTokens": 32768
+          },
+          {
+            "name": "gpt-4-1106-preview",
+            "maxTokens": 128000
+          },
+          {
+            "name": "gpt-4-turbo",
+            "maxTokens": 128000
+          },
+          {
+            "name": "gpt-4o",
+            "maxTokens": 128000
+          },
+          {
+            "name": "gpt-4o-mini",
+            "maxTokens": 128000
+          }
+        ],
+        "autoSyncModels": false,
+        "modelSource": "modelsDev"
+      },
+      {
+        "name": "Gemini",
+        "endpoint": "https://generativelanguage.googleapis.com",
+        "apiKey": "",
+        "models": [
+          {
+            "name": "gemini-1.5-pro",
+            "maxTokens": 1000000
+          },
+          {
+            "name": "gemini-1.5-flash",
+            "maxTokens": 1000000
+          },
+          {
+            "name": "gemini-1.5-flash-8b",
+            "maxTokens": 1000000
+          }
+        ],
+        "autoSyncModels": false,
+        "modelSource": "modelsDev"
+      }
+    ]
+  },
+  "migrations": {
+    "migrateToMacroIDFromEmbeddedMacro": true,
+    "useQuickAddTemplateFolder": true,
+    "incrementFileNameSettingMoveToDefaultBehavior": true,
+    "consolidateFileExistsBehavior": true,
+    "repairTemplateFileExistsBehavior": true,
+    "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
+    "setVersionAfterUpdateModalRelease": true,
+    "addDefaultAIProviders": true,
+    "removeMacroIndirection": true,
+    "migrateFileOpeningSettings": true,
+    "backfillFileOpeningDefaults": true,
+    "setProviderModelDiscoveryMode": true,
+    "migrateProviderApiKeysToSecretStorage": true
+  },
+  "options": {
+    "logLevel": "error"
+  }
+}

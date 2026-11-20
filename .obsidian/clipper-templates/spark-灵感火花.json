@@ -1,0 +1,41 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Spark 灵感火花",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n\n> 来源：{{url}}\n\n## 为什么重要\n\n{{description}}\n\n## 怎么做\n\n- [ ] \n",
+	"properties": [
+		{
+			"name": "type",
+			"value": "note",
+			"type": "text"
+		},
+		{
+			"name": "subtype",
+			"value": "inspiration",
+			"type": "text"
+		},
+		{
+			"name": "status",
+			"value": "spark",
+			"type": "text"
+		},
+		{
+			"name": "area",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "inspiration",
+			"type": "multitext"
+		},
+		{
+			"name": "createdAt",
+			"value": "{{date}}",
+			"type": "date"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "💡 {{title}}",
+	"path": "05 Notes/Inspiration"
+}

@@ -1,0 +1,13 @@
+{
+  "shouldConfirmBeforeCreate": true,
+  "weekStart": "locale",
+  "wordsPerDot": 250,
+  "showWeeklyNote": false,
+  "weeklyNoteFormat": "",
+  "weeklyNoteTemplate": "",
+  "weeklyNoteFolder": "",
+  "localeOverride": "system-default",
+  "dailyNoteFormat": "YYYY/MM/📅 YYYY-MM-DD",
+  "dailyNoteTemplate": "99 Templates/Journal/Daily.md",
+  "dailyNoteFolder": "05 Notes/Journal/Daily"
+}

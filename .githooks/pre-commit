@@ -1,0 +1,4 @@
+#!/bin/sh
+# 契约校验：提交前必须 0 ERROR
+VAULT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+cd "$VAULT" && exec uv run scripts/validate_cards.py

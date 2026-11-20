@@ -1,0 +1,236 @@
+{
+  "folderConfigs": {},
+  "iconSize": 20,
+  "colorPalettes": [
+    {
+      "name": "Vibrant",
+      "colors": [
+        "#FF0000",
+        "#FF8000",
+        "#FFFF00",
+        "#80FF00",
+        "#00FF00",
+        "#00FF80",
+        "#00FFFF",
+        "#0080FF",
+        "#0000FF",
+        "#8000FF",
+        "#FF00FF",
+        "#FF0080"
+      ]
+    },
+    {
+      "name": "Pastel",
+      "colors": [
+        "#FFB3B3",
+        "#FFD4B3",
+        "#FFF4B3",
+        "#D4FFB3",
+        "#B3FFB3",
+        "#B3FFD4",
+        "#B3FFF4",
+        "#B3D4FF",
+        "#B3B3FF",
+        "#D4B3FF",
+        "#F4B3FF",
+        "#FFB3D4"
+      ]
+    },
+    {
+      "name": "Earth",
+      "colors": [
+        "#8B6B4A",
+        "#8B7A4A",
+        "#8B8B4A",
+        "#7A8B4A",
+        "#6B8B4A",
+        "#5A8B5A",
+        "#4A8B6B",
+        "#4A7A8B",
+        "#4A6B8B",
+        "#5A5A8B",
+        "#6B4A8B",
+        "#7A4A8B"
+      ]
+    },
+    {
+      "name": "Cool",
+      "colors": [
+        "#4ACCCC",
+        "#4AB8CC",
+        "#4AA3CC",
+        "#4A8FCC",
+        "#4A7ACC",
+        "#4A66CC",
+        "#4A52CC",
+        "#4A3DCC",
+        "#4A29CC",
+        "#4A14CC"
+      ]
+    },
+    {
+      "name": "Warm",
+      "colors": [
+        "#CC4A4A",
+        "#CC5A4A",
+        "#CC6A4A",
+        "#CC7A4A",
+        "#CC8A4A",
+        "#CC9A4A",
+        "#CCAA4A",
+        "#CCBA4A",
+        "#CCCA4A",
+        "#CCDA4A"
+      ]
+    },
+    {
+      "name": "Muted",
+      "colors": [
+        "#B38080",
+        "#B38A80",
+        "#B39480",
+        "#B39E80",
+        "#B3A880",
+        "#B3B280",
+        "#A8B380",
+        "#9EB380",
+        "#94B380",
+        "#8AB380",
+        "#80B380",
+        "#80B38A"
+      ]
+    }
+  ],
+  "activePaletteIndex": 0,
+  "autoColorEnabled": false,
+  "autoColorMode": "gradient",
+  "iconColorTransformation": {
+    "type": "none"
+  },
+  "folderColorTransformation": {
+    "type": "none"
+  },
+  "textColorTransformation": {
+    "type": "lightness",
+    "adjustment": 20
+  },
+  "childBaseTransformation": {
+    "type": "lightness",
+    "adjustment": 10,
+    "useGradient": false,
+    "backgroundOpacity": 100
+  },
+  "folderColorOpacity": 0,
+  "defaultIconRules": [],
+  "profiles": [
+    {
+      "id": "preset-minimal",
+      "name": "Minimal",
+      "iconSize": 16,
+      "activePaletteIndex": 0,
+      "autoColorEnabled": true,
+      "autoColorMode": "gradient",
+      "iconColorTransformation": {
+        "type": "none"
+      },
+      "folderColorTransformation": {
+        "type": "none"
+      },
+      "textColorTransformation": {
+        "type": "lightness",
+        "adjustment": 25
+      },
+      "childBaseTransformation": {
+        "type": "lightness",
+        "adjustment": 10,
+        "useGradient": false,
+        "backgroundOpacity": 0
+      },
+      "folderColorOpacity": 0,
+      "defaultIconRules": []
+    },
+    {
+      "id": "preset-elegant",
+      "name": "Elegant",
+      "iconSize": 18,
+      "activePaletteIndex": 1,
+      "autoColorEnabled": true,
+      "autoColorMode": "gradient",
+      "iconColorTransformation": {
+        "type": "lightness",
+        "adjustment": -15
+      },
+      "folderColorTransformation": {
+        "type": "none"
+      },
+      "textColorTransformation": {
+        "type": "lightness",
+        "adjustment": 30
+      },
+      "childBaseTransformation": {
+        "type": "lightness",
+        "adjustment": 8,
+        "useGradient": true,
+        "backgroundOpacity": 0
+      },
+      "folderColorOpacity": 0,
+      "defaultIconRules": []
+    },
+    {
+      "id": "preset-bold",
+      "name": "Bold",
+      "iconSize": 20,
+      "activePaletteIndex": 0,
+      "autoColorEnabled": true,
+      "autoColorMode": "gradient",
+      "iconColorTransformation": {
+        "type": "none"
+      },
+      "folderColorTransformation": {
+        "type": "lightness",
+        "adjustment": -20
+      },
+      "textColorTransformation": {
+        "type": "lightness",
+        "adjustment": 40
+      },
+      "childBaseTransformation": {
+        "type": "hsl",
+        "hue": 5,
+        "saturation": 5,
+        "lightness": 8,
+        "useGradient": true,
+        "backgroundOpacity": 0
+      },
+      "folderColorOpacity": 0,
+      "defaultIconRules": []
+    },
+    {
+      "id": "preset-root-background",
+      "name": "Root Background",
+      "iconSize": 18,
+      "activePaletteIndex": 0,
+      "autoColorEnabled": true,
+      "autoColorMode": "gradient",
+      "iconColorTransformation": {
+        "type": "none"
+      },
+      "folderColorTransformation": {
+        "type": "lightness",
+        "adjustment": -15
+      },
+      "textColorTransformation": {
+        "type": "lightness",
+        "adjustment": 35
+      },
+      "childBaseTransformation": {
+        "type": "lightness",
+        "adjustment": 12,
+        "useGradient": false,
+        "backgroundOpacity": 0
+      },
+      "folderColorOpacity": 80,
+      "defaultIconRules": []
+    }
+  ]
+}

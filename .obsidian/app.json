@@ -1,0 +1,15 @@
+{
+  "defaultViewMode": "preview",
+  "foldHeading": true,
+  "showLineNumber": false,
+  "livePreview": true,
+  "strictLineBreaks": false,
+  "showFrontmatter": false,
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "newFileLocation": "root",
+  "uriCallbacks": true,
+  "promptDelete": false,
+  "attachmentFolderPath": "./_assets",
+  "readableLineLength": false
+}
