@@ -26,8 +26,8 @@ archived: false
 
 ### 1. 创建待办 create_task
 - **触发**：「记个待办…」「帮我建任务：明天体检」「别忘了 X」
-- **参数**：title（必填，短语化标题）；可选 area/project/goal/topic/priority/tags——语义能明确匹配词表时直接带上（捕获即分诊），不确定就留空待夜间分诊；可选 source（库内卡完整名，任务从某张卡派生时用，如从阅读材料派生的练习）；可选 due（YYYY-MM-DD，可选 HH:MM）——**用户明说截止才带，没说截止就留空**（due 一律当真，播种假日期会让任务莫名逾期）；可选 owner（👤 联系人卡名，可只说人名不带前缀——「这事交给 X」「等 X 回复」时带，owner 非空即「等待中」，due 顺手记约定回收日）；可选 collaborators（人名数组——「我和 X 一起做」类共同完成）
-- **规则**：路径 `06 Tasks/YYYY/MM/<标题>_MMDD.md`；status: todo、priority: medium、**due 未说截止不写**；area/project/goal/topic 受控词表校验（无效词不阻塞捕获——忽略并在回报中说明）；due 格式非法同样忽略并说明；owner 同样受控词表（👤 联系人卡，无效不阻塞、忽略并说明）；goal 同时写 frontmatter 与正文「相关」节双链；source 校验须为库内唯一卡名，同样写 frontmatter + 正文「源材料」双链
+- **参数**：title（必填，短语化标题）；可选 area/project/goal/topic/priority/tags——语义能明确匹配词表时直接带上（捕获即分诊），不确定就留空待夜间分诊；可选 source（库内卡完整名，任务从某张卡派生时用，如从阅读材料派生的练习）；可选 due（YYYY-MM-DD，可选 HH:MM）——**不用主动带**：执行器默认播种当日（新建当天首页可见，当天没做完次日进逾期属预期催办口径）；只有用户说了别的截止时间才带；可选 owner（👤 联系人卡名，可只说人名不带前缀——「这事交给 X」「等 X 回复」时带，owner 非空即「等待中」，due 顺手记约定回收日）；可选 collaborators（人名数组——「我和 X 一起做」类共同完成）
+- **规则**：路径 `06 Tasks/YYYY/MM/<标题>_MMDD.md`；status: todo、priority: medium、**due 未指定默认播种当日**（格式非法回退当日并说明）；area/project/goal/topic 受控词表校验（无效词不阻塞捕获——忽略并在回报中说明）；owner 同样受控词表（👤 联系人卡，无效不阻塞、忽略并说明）；goal 同时写 frontmatter 与正文「相关」节双链；source 校验须为库内唯一卡名，同样写 frontmatter + 正文「源材料」双链
 - **执行面**：Newton 动作块 ｜ Claude Code：`uv run scripts/sb.py capture_task --title "…"` ｜ URL：`obsidian://newton?capture=…`
 
 ### 2. 完成任务 complete_task
@@ -69,7 +69,7 @@ archived: false
 
 ### 7. 提醒推送（逾期/今日到期）
 - **触发**：launchd 每日 08:57 自动（com.benniu.sb.remind）
-- **规则**：扫描 06 Tasks 开放任务；**due 一律当真**——字段有值即真截止，到期就提醒、过期就报逾期（v3.12.3 起 capture 不再播种创建日假 due，没说截止就留空）；owner 非空的委托任务逾期即催办信号（due = 约定回收日）；status=paused 的搁置任务不扫；同日只推一次；无命中静默
+- **规则**：扫描 06 Tasks 开放任务；**due 一律当真**——字段有值即真截止，到期就提醒、过期就报逾期（capture 默认播种当日：新建当天可见，当天没做完次日进逾期，属预期催办信号）；owner 非空的委托任务逾期即催办信号（due = 约定回收日）；status=paused 的搁置任务不扫；同日只推一次；无命中静默
 - **执行面**：`uv run scripts/check_reminders.py`（stdout 单行摘要；退出码 0=无命中/1=有提醒/2=失败）→ wrapper 发 macOS 通知
 
 ### 8. 会议行动项挖掘

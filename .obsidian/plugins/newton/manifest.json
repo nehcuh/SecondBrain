@@ -1,7 +1,7 @@
 {
   "id": "newton",
   "name": "Newton",
-  "version": "0.10.4",
+  "version": "0.10.5",
   "minAppVersion": "1.5.0",
   "description": "SecondBrain AI 中枢 Newton：对话（动作块直写 + 长任务清单执行 + 并发查询）、快速捕获（语音）、会议卡、日记/周报/月报（真实数据聚合 + 自动生成）、Inbox 分诊、全库搜索、后台沉淀（知识卡 + 深层合成 + 会话清理）——写入遵守 AGENTS.md 卡片契约",
   "author": "huchen",

@@ -118,7 +118,7 @@
 | `title` | `string` | 文件名去掉 `_MMDD` 后缀 |
 | `status` | `"todo"\|"in-progress"\|"paused"\|"done"` | paused=搁置（不计逾期、不进开放清单） |
 | `priority` | `"urgent"\|"high"\|"medium"\|"low"` | |
-| `due` | `date`（可选 ` HH:MM` 后缀） | **一律当真**：字段有值即真截止（提醒/逾期/报告按日期部分判）；没说截止就留空——写入端禁止播种创建日假 due |
+| `due` | `date`（可选 ` HH:MM` 后缀） | **一律当真**：字段有值即真截止（提醒/逾期/报告按日期部分判）；新建未指定截止默认播种当日（v3.12.5：当天可见，未完成次日进逾期属预期口径） |
 | `area` / `project` / `topic` | `wikilink` | 关联（领域/项目/主题；三关联任一非空即不进 Inbox） |
 | `owner` | `wikilink`（可选） | 负责人（👤 联系人卡，受控词表强制，可只说人名不带前缀）；委托他人时才填，空 = 自己；开放任务 owner 非空即「等待中」（GTD waiting-for，读取时推导，不动 status 枚举）；due 顺手记约定回收日（逾期 = 催办时机） |
 | `collaborators` | `list[string]`（可选） | 参与人（人名数组，与会议 attendees 同款；共同完成非交办；写入合并去重、wikilink 输入归一成人名） |

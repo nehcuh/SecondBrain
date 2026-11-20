@@ -13,7 +13,7 @@ tags: [journal, daily]
 const today = dv.date(dv.current().date);
 const tasks = dv.pages('"06 Tasks"')
   .where(p => p.type === "task" && !p.archived)
-  .where(p => p.due && dv.date(p.due).toFormat("yyyy-MM-dd") === today.toFormat("yyyy-MM-dd"))
+  .where(p => p.due && dv.date(typeof p.due === "string" ? p.due.replace(" ", "T") : p.due).toFormat("yyyy-MM-dd") === today.toFormat("yyyy-MM-dd"))
   .sort(p => p.priority, "desc");
 if (tasks.length === 0) { dv.el("p", "暂无今日任务"); }
 else { dv.table(["任务", "优先级", "状态"], tasks.map(p => [p.file.link, p.priority, p.status])); }
@@ -48,7 +48,7 @@ else { dv.table(["会议", "时间", "状态"], meetings.map(p => [p.file.link, 
 ```dataviewjs
 const today = dv.date(dv.current().date).toFormat("yyyy-MM-dd");
 
-const doneTasks = dv.pages('"06 Tasks"').where(p => p.type === "task" && p.status === "done" && p.completedAt && dv.date(p.completedAt).toFormat("yyyy-MM-dd") === today);
+const doneTasks = dv.pages('"06 Tasks"').where(p => p.type === "task" && p.status === "done" && p.completedAt && dv.date(typeof p.completedAt === "string" ? p.completedAt.replace(" ", "T") : p.completedAt).toFormat("yyyy-MM-dd") === today);
 const meetings = dv.pages('"05 Notes/Meetings"').where(p => p.date && dv.date(p.date).toFormat("yyyy-MM-dd") === today);
 const notes = dv.pages('"05 Notes"').where(p => p.createdAt && dv.date(p.createdAt).toFormat("yyyy-MM-dd") === today);
 const contacts = dv.pages('"05 Notes/Contacts"').where(p => p.createdAt && dv.date(p.createdAt).toFormat("yyyy-MM-dd") === today);

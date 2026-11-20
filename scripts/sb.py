@@ -2,7 +2,7 @@
 """SecondBrain Agent 操作 CLI —— 幂等卡片操作。
 
 用法:
-    uv run scripts/sb.py capture_task "标题" [--due YYYY-MM-DD] [--priority high] \
+    uv run scripts/sb.py capture_task "标题" [--due YYYY-MM-DD（默认当日）] [--priority high] \
         [--area "[[📂 X]]"] [--project "[[🚀 Y]]"] [--source "🤝 会议_2026-10-08"]
     uv run scripts/sb.py complete_task "标题或路径片段"
     uv run scripts/sb.py set_field "标题片段" field value [--type meeting]
@@ -427,7 +427,8 @@ def capture_task(root: Path, title: str, due: str | None, priority: str,
         "title": stem,
         "status": "todo",
         "priority": priority,
-        "due": due or "",
+        # v3.12.5：未指定 due 默认播种当日（用户拍板——新建当天首页可见，未完成次日进逾期属预期）
+        "due": due or t.isoformat(),
         "area": area,
         "project": project,
         "topic": topic,

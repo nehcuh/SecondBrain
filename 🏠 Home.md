@@ -17,7 +17,7 @@ const todayStr = today.toFormat("yyyy-MM-dd");
 const dstr = v => { if (!v) return null; const d = dv.date(typeof v === "string" ? v.replace(" ", "T") : v); return d ? d.toFormat("yyyy-MM-dd") : null; };
 
 const allTasks = dv.pages('"06 Tasks"').where(p => p.type === "task" && !p.archived && p.status !== "done" && p.status !== "paused");
-// 有效截止日：due 一律当真——字段有值即真截止（v3.12.3 起 capture 不播种创建日假 due）——与提醒 Agent/Newton/手册 §7 同口径
+// 有效截止日：due 一律当真——字段有值即真截止（v3.12.5 起 capture 默认播种当日：当天可见，未完成次日进逾期属预期）——与提醒 Agent/Newton/手册 §7 同口径
 const dueOf = p => {
   if (!p.due) return null;
   const raw = typeof p.due === "string" ? p.due.replace(" ", "T") : p.due;
@@ -66,7 +66,7 @@ const jump = async (title) => {
 const stats = [
   { label: "Inbox", value: inbox.length, color: inbox.length > 0 ? "amber" : "gray", go: () => jump("待办中心") },
   { label: "今日待办", value: todayTasks.length, color: "teal", go: () => jump("待办中心") },
-  { label: "逾期", value: overdue.length, color: overdue.length > 0 ? "coral" : "gray", go: () => jump("逾期任务") },
+  { label: "逾期", value: overdue.length, color: overdue.length > 0 ? "coral" : "gray", go: () => jump("待办中心") },
   { label: "今日会议", value: todayMeetings.length, color: "purple", go: () => jump("待办中心") },
   { label: "待整理", value: unprocessedClips.length, color: unprocessedClips.length > 0 ? "pink" : "gray", go: () => jump("待整理剪藏") },
   { label: "习惯", value: habitsUndone.length, color: habitsUndone.length > 0 ? "blue" : "gray", go: () => jump("今日习惯") },
@@ -82,7 +82,8 @@ for (const s of stats) {
 
 ```dataviewjs
 // ── 待办中心 ──
-// Inbox / 今日任务 / 进行中 / 今日会议 四栏合一——本质都是待办跟踪，合并省空间
+// Inbox / 今日任务 / 逾期 / 进行中 / 今日会议 五栏合一——本质都是待办跟踪，合并省空间
+// （v3.12.5：逾期独立成栏方便跟踪；已完成撤栏——当日完成清单由日记「今日 Effort」承接）
 const areaName = a => { if (!a) return ""; if (typeof a === "string") return a.replace(/^\[\[.*\||\]\]$/g, ""); try { return a.path.split("/").pop().replace(/^📂 /, ""); } catch { return ""; } };
 const dot = pr => pr === "urgent" ? "🔴" : pr === "high" ? "🟠" : pr === "medium" ? "🟡" : "⚪";
 const due = d => { try { const dt = dv.date(typeof d === "string" ? d.replace(" ", "T") : d); return dt.toFormat("MM/dd") + " 周" + ["日","一","二","三","四","五","六"][dt.weekday % 7]; } catch { return "—"; } };
@@ -97,6 +98,10 @@ const inbox = dv.pages('"06 Tasks"')
 const tasks = dv.pages('"06 Tasks"')
   .where(p => p.type === "task" && !p.archived && p.status !== "done" && p.status !== "paused" && dstr(p.due) === todayStr)
   .sort(p => ["urgent","high","medium","low"].indexOf(p.priority));
+const overdue = dv.pages('"06 Tasks"')
+  .where(p => p.type === "task" && !p.archived && p.status !== "done" && p.status !== "paused")
+  .where(p => { const d = dstr(p.due); return d && d < todayStr; })
+  .sort(p => dstr(p.due));
 const inProgress = dv.pages('"06 Tasks"')
   .where(p => p.type === "task" && !p.archived && p.status === "in-progress")
   .sort(p => String(p.due || "9999-12-31"), "asc");
@@ -126,18 +131,9 @@ const meta = (r, t) => { if (t) r.createEl("span", {text: String(t), cls: "sb-to
 
 column("📥", "Inbox", inbox, "已清空 ✓", (r, p) => { meta(r, dot(p.priority)); title(r, p); meta(r, created(p.createdAt)); });
 column("☑️", "今日任务", tasks, "今天没有 ✨", (r, p) => { meta(r, dot(p.priority)); title(r, p); meta(r, areaName(p.area)); });
+column("⚠️", "逾期", overdue, "没有逾期 ✓", (r, p) => { meta(r, dot(p.priority)); title(r, p); meta(r, due(p.due) + "·" + Math.floor(today.diff(dv.date(String(p.due).replace(" ", "T")), "days").days) + "天"); });
 column("🔄", "进行中", inProgress, "暂无 ✓", (r, p) => { title(r, p); meta(r, due(p.due)); });
 column("🤝", "今日会议", meetings, "今天没有 ✓", (r, p) => { meta(r, p.time || "—"); title(r, p); });
-const doneAt = d => { try { return dv.date(typeof d === "string" ? d.replace(" ", "T") : d).toFormat("HH:mm"); } catch { return ""; } };
-// 已完成 = 今日完成的任务（completedAt）+ 今天开完的会议（status=done；会议无 completedAt，以会议日为准）
-const doneTasks = dv.pages('"06 Tasks"')
-  .where(p => p.type === "task" && p.status === "done" && dstr(p.completedAt) === todayStr)
-  .sort(p => p.priority);
-const doneMeetings = dv.pages('"05 Notes/Meetings"')
-  .where(p => p.type === "meeting" && p.status === "done" && dstr(p.date) === todayStr)
-  .sort(p => p.time);
-const doneToday = [...doneTasks, ...doneMeetings];
-column("✅", "已完成", doneToday, "今天还没有 ✓", (r, p) => { r.classList.add("done"); title(r, p); meta(r, doneAt(p.completedAt || p.time)); });
 ```
 
 
@@ -492,30 +488,6 @@ const latestNotes = dv.pages('"05 Notes"')
   .limit(5);
 dv.el("h2", "📝 最近笔记");
 if (latestNotes.length) { dv.table(["笔记", "类型", "更新"], latestNotes.map(p => [dv.fileLink(p.file.path, false, p.title || p.file.name), p.subtype === "learning" ? "📖" : p.subtype === "handbook" ? "📋" : p.subtype === "blog" ? "✍️" : p.subtype === "clip" ? "📎" : "📌", fmt(p.updatedAt || p.createdAt)])); }
-```
-
-```dataviewjs
-// ── 逾期任务 ──
-const fmt = d => { try { const dt = dv.date(typeof d==="string" ? d.replace(' ','T') : d); return dt.toFormat("yyyyMMdd") + "_周" + ["日","一","二","三","四","五","六"][dt.weekday % 7]; } catch { return String(d||"—"); } };
-const today = dv.date("today");
-// due 一律当真——字段有值即真截止（与顶部统计/提醒 Agent 同口径）；paused 搁置不算逾期
-const dueOf = p => {
-  if (!p.due) return null;
-  const d = dv.date(typeof p.due === "string" ? p.due.replace(" ", "T") : p.due); if (!d) return null;
-  return d;
-};
-const overdue = dv.pages('"06 Tasks"')
-  .where(p => p.type === "task" && !p.archived && p.status !== "done" && p.status !== "paused")
-  .where(p => { const d = dueOf(p); return d && d < today; })
-  .sort(p => dueOf(p));
-
-dv.el("h2", "⚠️ 逾期任务");
-if (overdue.length) {
-  dv.table(["任务", "截止", "逾期天数"], overdue.map(p => {
-    const days = Math.floor(today.diff(dueOf(p), "days").days);
-    return [dv.fileLink(p.file.path, false, (p.icon ? p.icon + " " : "") + (p.title || p.file.name)), fmt(p.due), `${days} 天`];
-  }));
-}
 ```
 
 

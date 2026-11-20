@@ -119,7 +119,7 @@ AGENTS.md        卡片契约 + Agent 行为守则（单一事实源，AI 工具
 ## 脚本清单
 
 ```bash
-uv run scripts/sb.py capture_task "标题" [--due …] [--priority …] [--area …] [--owner 人名]   # 捕获任务
+uv run scripts/sb.py capture_task "标题" [--due …] [--priority …] [--area …] [--owner 人名]   # 捕获任务（due 未指定默认当日）
 uv run scripts/sb.py complete_task "标题片段"          # 完成任务（幂等）
 uv run scripts/sb.py checkin_habit "习惯片段" [--date …] [--note …]   # 习惯打卡
 uv run scripts/sb.py inbox                            # 待分诊清单

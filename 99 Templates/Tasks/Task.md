@@ -3,7 +3,7 @@ type: task
 title: "<% tp.file.title.split('_').slice(0, -1).join('_') || tp.file.title %>"
 status: todo
 priority: medium
-due: 
+due: <% tp.date.now("YYYY-MM-DD") %>
 area: ""
 project: 
 tags: [task]
