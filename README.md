@@ -1,7 +1,7 @@
 # SecondBrain — 卡片式第二大脑（Obsidian + AI）
 
 一套「开箱即用」的个人知识库模板：**目录即架构、卡片即契约、脚本守纪律、AI 当助手**。
-用 [Obsidian](https://obsidian.md) 打开就是一个能跑起来的完整系统——看板、模板、校验脚本、命令行工具、AI 对话插件全齐。
+克隆本仓库，用 [Obsidian](https://obsidian.md) 打开就是一个能跑起来的完整系统——看板、模板、校验脚本、命令行工具、AI 对话插件全齐。
 
 > 仓库内置一套 **mock 示例数据**（张三/李四、晨跑、周会……），用来演示各卡片形态与看板效果。
 > 熟悉后整体删除 `01 Goals/`~`07 Habits/` 下的示例卡即可开始自己的内容，骨架会由模板重建。
@@ -27,10 +27,15 @@
 
 - [Obsidian](https://obsidian.md)（桌面端；iPad 端也支持，插件为 isDesktopOnly: false）
 - [uv](https://docs.astral.sh/uv/)（Python 工具链，脚本与校验都靠它跑）
+- git
 
-### 2. 打开库并启用插件
+### 2. 克隆并打开库
 
-用 Obsidian 「Open folder as vault」打开本目录。
+```bash
+git clone https://github.com/nehcuh/SecondBrain.git
+```
+
+用 Obsidian 「Open folder as vault」打开克隆下来的 `SecondBrain` 目录。
 
 设置 → 第三方插件：关闭安全模式，启用全部插件（本仓库已捆绑，无需另装）：
 
@@ -43,7 +48,7 @@
 ### 3. 跑一遍校验（确认环境 OK）
 
 ```bash
-cd <本目录>
+cd SecondBrain
 uv sync                              # 首次：装 Python 依赖
 uv run scripts/validate_cards.py     # 应输出 0 ERROR / 0 WARN
 ```
@@ -136,7 +141,8 @@ uv run scripts/stamp_new_vault.py /path/to/new-vault  # 从本库再分发一个
 
 ## Mock 数据说明
 
-`01`~`07` 目录下的示例卡覆盖了所有形态，建议按这张表对照着看一遍再删：
+`01`~`07` 目录下的示例卡覆盖了所有形态，建议按这张表对照着看一遍再删。
+删完后 `git add -A && git commit` 提交一次，模板就成为你自己的库起点（提交钩子会自动跑校验）：
 
 | 看什么 | 卡片 |
 |--------|------|
