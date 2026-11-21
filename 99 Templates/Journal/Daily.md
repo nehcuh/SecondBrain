@@ -1,11 +1,11 @@
 ---
 type: journal
 subtype: daily
-date: <% tp.date.now("YYYY-MM-DD") %>
+date: <% tp.date.now("YYYY-MM-DD", 0, tp.file.title.match(/\d{4}-\d{2}-\d{2}/)?.[0]) %>
 tags: [journal, daily]
 ---
 
-# <% tp.date.now("YYYY-MM-DD dddd") %>
+# <% tp.date.now("YYYY-MM-DD dddd", 0, tp.file.title.match(/\d{4}-\d{2}-\d{2}/)?.[0]) %>
 
 ## 今日任务
 
